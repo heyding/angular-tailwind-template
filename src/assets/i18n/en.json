@@ -1,4 +1,25 @@
 {
+  "header": {
+    "menu": {
+      "solutions": "Solutions",
+      "pricing": "Pricing",
+      "docs": "Docs",
+      "company": "Company"
+    },
+    "button": {
+      "sign-in": "Sign In",
+      "sign-up": "Sign Up"
+    }
+  },
+  "footer": {
+    "text": {
+      "long-notice": "Big news! We're excited to announce a brand new product.",
+      "short-notice": "We announced a new product!"
+    },
+    "button": {
+      "learn-more": "Learn more"
+    }
+  },
   "home": {
     "headline": "Angular + Tailwind Template",
     "text": "If the header and the footer look like the screenshots in \"src/assets/img\", Tailwind is set up and you can start coding."
