@@ -21,6 +21,10 @@ You will find some designed components at [tailwindui.com](https://tailwindui.co
 
 This project uses ngx-translate to enable the translation into different language. It was set up by following this [guide](https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-angular-app-with-ngx-translate). You can add new language files in "src/assets/i18n".
 
+## NgRX
+
+This project uses NgRx functionality to keep a good overview of the state. It was set up by following this [guide](https://ngrx.io/guide/store/install) and can be used accordingly.
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
