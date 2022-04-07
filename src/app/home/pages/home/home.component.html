@@ -1,12 +1,25 @@
-<!-- Full-width fluid until the `md` breakpoint, then lock to container -->
-<div class="md:container md:mx-auto">
-  <div class="bg-white">
-    <div class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-        <span class="block pb-10">{{ 'home.headline' | translate }}</span>
-        <span class="block">{{ 'home.text' | translate }}</span>
-      </h2>
+<div class="bg-white pt-8">
+  <main>
+    <div class="relative">
+      <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+          <div class="absolute inset-0">
+            <img class="h-full w-full object-cover"
+                 src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
+                 alt="People working on laptops">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply"></div>
+          </div>
+          <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+            <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+              <span class="block text-white">{{ 'home.headline' | translate }}</span>
+            </h1>
+            <p
+              class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">{{ 'home.text' | translate }}</p>
+            <app-language-switch></app-language-switch>
+          </div>
+        </div>
+      </div>
     </div>
-    <app-language-switch></app-language-switch>
-  </div>
+  </main>
 </div>
