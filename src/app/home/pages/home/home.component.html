@@ -1,6 +1,6 @@
 <div class="bg-white pt-8">
   <main>
-    <div class="relative">
+    <div class="relative pb-10">
       <div class="absolute inset-x-0 bottom-0 h-1/2"></div>
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
@@ -22,5 +22,29 @@
       </div>
     </div>
   </main>
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold text-gray-900">{{'home.ngrx.title' | translate}}</h2>
+        <p class="mt-4 text-lg text-gray-500">{{'home.ngrx.description' | translate}}</p>
+      </div>
+      <div class="max-w-3xl mx-auto pt-6">
+        <div>
+          <div class="mt-1">
+          <textarea [(ngModel)]="userInput" rows="4"
+                    class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md"></textarea>
+            <div class="mt-8 flex justify-center">
+              <button type="button" (click)="storeUserInput()"
+                      class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-indigo-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                {{'home.ngrx.button' | translate}}
+              </button>
+            </div>
+          </div>
+          <p *ngIf="displayUserInput"
+             class="block text-xl font-medium text-gray-700">{{'home.ngrx.message' | translate}}{{userInput$ | async}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <app-feature-overview></app-feature-overview>
 </div>

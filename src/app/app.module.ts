@@ -8,7 +8,10 @@ import {SharedModule} from './shared/shared.module';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
+import {StoreModule} from '@ngrx/store';
+import {EffectsModule} from '@ngrx/effects';
+import * as fromApp from './app.reducer';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { AppRoutingModule } from './app-routing.module';
         deps: [HttpClient]
       }
     }),
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(fromApp.appReducer),
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
