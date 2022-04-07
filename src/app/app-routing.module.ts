@@ -10,8 +10,9 @@ const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
-  //Wild Card Route for 404 request
-  {path: '**', pathMatch: 'full', component: PageNotFoundComponent},
+  {path: 'not-found', component: PageNotFoundComponent},
+  // Wild Card Route for 404 request - make sure this is always the last element of the routes Array
+  {path: '**', pathMatch: 'full', redirectTo: 'not-found'},
 ];
 
 @NgModule({
