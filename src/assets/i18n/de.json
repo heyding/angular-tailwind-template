@@ -22,7 +22,13 @@
   },
   "home": {
     "headline": "Angular + Tailwind Template",
-    "text": "Wenn die Seite wie der Screenshot in \"src/assets/img\" aussieht, ist Tailwind korrekt eingerichtet und du kannst beginnen."
+    "text": "Wenn die Seite wie der Screenshot in \"src/assets/img\" aussieht, ist Tailwind korrekt eingerichtet und du kannst beginnen.",
+    "ngrx": {
+      "title": "NGRX Test",
+      "description": "Wir haben NGRX Funktionalität schon implementiert - Schreibe etwas in die Textarea, drück den Button und aktualisiere den Browser Tab um das zu verifizieren.",
+      "button": "Input speichern",
+      "message": "Deine Eingabe war: "
+    }
   },
   "features": {
     "title": "Funktionen",
