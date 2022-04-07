@@ -12,8 +12,6 @@ import {setUserInput} from './store/home.actions';
 export class HomeComponent implements OnInit {
 
   userInput$: Observable<string> | undefined;
-
-  userInput: string = 'Initial';
   displayUserInput: boolean = false;
 
   constructor(private store: Store) {
@@ -23,8 +21,12 @@ export class HomeComponent implements OnInit {
     this.userInput$ = this.store.select(selectUserInput);
   }
 
-  storeUserInput() {
+  storeUserInput(userInput: string) {
+    this.displayUserInput = false;
+    this.store.dispatch(setUserInput({userInput}));
+  }
+
+  showUserInput(): void {
     this.displayUserInput = true;
-    this.store.dispatch(setUserInput({userInput: this.userInput}));
   }
 }

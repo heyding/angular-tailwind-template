@@ -13,5 +13,6 @@ export const initialState: HomeState = {
 
 export const reducer = createReducer(
   initialState,
+  on(HomeActions.getUserInput, (state) => ({...state})),
   on(HomeActions.setUserInput, (state, {userInput}) => ({...state, userInput: userInput}))
 );
