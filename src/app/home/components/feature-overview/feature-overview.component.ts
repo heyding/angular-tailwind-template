@@ -15,7 +15,7 @@ export class FeatureOverviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.features = [
-      'tailwind', 'routing', 'i18n', 'directory'
+      'tailwind', 'routing', 'i18n', 'directory', 'ngrx'
     ]
   }
 

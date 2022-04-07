@@ -40,7 +40,7 @@
       },
       "routing": {
         "title": "Routing",
-        "description": "Wir haben Routing innerhalb der App und sogar eine 404-Fehlerseite hinzugefügt, wenn die URL falsch ist."
+        "description": "Wir haben Routing innerhalb der App eingerichtet und sogar eine 404-Fehlerseite hinzugefügt, falls die eingegebene URL falsch ist."
       },
       "i18n": {
         "title": "i18n",
@@ -49,6 +49,10 @@
       "directory": {
         "title": "Orderstruktur",
         "description": "Wir haben eine skalierbare Ordnerstruktur angelegt, die einer modernen Angular-Architektur entspricht."
+      },
+      "ngrx": {
+        "title": "NgRX",
+        "description": "NgRx ist vorkonfiguriert. Du brauchst nichts zu installieren und kannst direkt Actions, Reducer und Effects für deine Feautes anlegen."
       }
     }
   },

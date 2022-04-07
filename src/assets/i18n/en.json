@@ -49,6 +49,10 @@
       "directory": {
         "title": "Folder structure",
         "description": "We set up a scalable folder structure, which you can use."
+      },
+      "ngrx": {
+        "title": "NgRX",
+        "description": "NgRx is preconfigured. You do not need to install anything and are able to create actions, reducers and effects for your features."
       }
     }
   },
