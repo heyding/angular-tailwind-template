@@ -24,6 +24,28 @@
     "headline": "Angular + Tailwind Template",
     "text": "Wenn der Header und der Footer wie die Screenshots in \"src/assets/img\" aussehen, ist Tailwind korrekt eingerichtet und du kannst beginnen."
   },
+  "features": {
+    "title": "Funktionen",
+    "text": "Hier findest du eine Liste mit Funktionen, die du sofort nutzen kannst.",
+    "feature-list": {
+      "tailwind": {
+        "title": "Tailwind CSS 3.0",
+        "description": "Dieses Template implementiert Tailwind CSS 3.0. Du kannst diese Vorlagen sofort in deinen Komponenten verwenden."
+      },
+      "routing": {
+        "title": "Routing",
+        "description": "Wir haben Routing innerhalb der App und sogar eine 404-Fehlerseite hinzugefügt, wenn die URL falsch ist."
+      },
+      "i18n": {
+        "title": "i18n",
+        "description": "Dieses Template nutzt ngx-translate. Du kannst verschiedene Sprachen nutzen, indem du die .json Files erweiterst."
+      },
+      "directory": {
+        "title": "Orderstruktur",
+        "description": "Wir haben eine skalierbare Ordnerstruktur angelegt, die einer modernen Angular-Architektur entspricht."
+      }
+    }
+  },
   "about": {
     "title": "Über uns",
     "headline": "Unser Team"

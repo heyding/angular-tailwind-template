@@ -6,6 +6,7 @@ import { LanguageSwitchComponent } from './components/language-switch/language-s
 import { AboutComponent } from './pages/about/about.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {RouterModule} from '@angular/router';
+import { FeatureOverviewComponent } from './components/feature-overview/feature-overview.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {RouterModule} from '@angular/router';
     HomeComponent,
     LanguageSwitchComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FeatureOverviewComponent
   ],
   exports: [
     HomeComponent
