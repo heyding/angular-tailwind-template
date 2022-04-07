@@ -23,5 +23,17 @@
   "home": {
     "headline": "Angular + Tailwind Template",
     "text": "Wenn der Header und der Footer wie die Screenshots in \"src/assets/img\" aussehen, ist Tailwind korrekt eingerichtet und du kannst beginnen."
+  },
+  "about": {
+    "title": "Über uns",
+    "headline": "Unser Team"
+  },
+  "404": {
+    "title": "Fehler 404",
+    "headline": "Seite nicht gefunden",
+    "text": "Es tut uns leid. Diese Seite existiert nicht.",
+    "button": {
+      "back-to-start": "Zurück zur Startseite"
+    }
   }
 }
