@@ -22,7 +22,7 @@
   },
   "home": {
     "headline": "Angular + Tailwind Template",
-    "text": "Wenn der Header und der Footer wie die Screenshots in \"src/assets/img\" aussehen, ist Tailwind korrekt eingerichtet und du kannst beginnen."
+    "text": "Wenn die Seite wie der Screenshot in \"src/assets/img\" aussieht, ist Tailwind korrekt eingerichtet und du kannst beginnen."
   },
   "features": {
     "title": "Funktionen",
