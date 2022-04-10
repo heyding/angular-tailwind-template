@@ -1,23 +1,10 @@
-import * as HomeActions from './home.actions';
+import {Action, createReducer, on} from '@ngrx/store';
+import {defaultHomeStore, HomeState} from './home.store';
+import {HomeActions} from './home.actions';
 
-export const homeFeatureKey = 'home';
+const homeRedux = createReducer(defaultHomeStore,
+  on(HomeActions.setUserInput, (state, {userInput}) => ({...state, userInput})));
 
-export interface HomeState {
-  userInput: string;
-}
-
-export const initialHomeState: HomeState = {
-  userInput: 'Hello world!'
-};
-
-export function homeReducer(state: HomeState = initialHomeState, action: HomeActions.HomeActions): HomeState {
-  switch (action.type) {
-    case HomeActions.SET_USER_INPUT:
-      return {
-        ...state,
-        userInput: action.payload
-      };
-    default:
-      return state;
-  }
+export function homeReducer(state: HomeState, action: Action): HomeState {
+  return homeRedux(state, action);
 }

@@ -8,10 +8,11 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 import {RouterModule} from '@angular/router';
 import {FeatureOverviewComponent} from './components/feature-overview/feature-overview.component';
 import {StoreModule} from '@ngrx/store';
-import * as fromHome from './pages/home/store/home.reducer';
 import {EffectsModule} from '@ngrx/effects';
 import {HomeEffects} from './pages/home/store/home.effects';
 import {FormsModule} from '@angular/forms';
+import {homeFeatureKey} from './pages/home/store/home.store';
+import {homeReducer} from './pages/home/store/home.reducer';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import {FormsModule} from '@angular/forms';
     CommonModule,
     TranslateModule,
     RouterModule,
-    StoreModule.forFeature(fromHome.homeFeatureKey, fromHome.homeReducer),
+    StoreModule.forFeature(homeFeatureKey, homeReducer),
     EffectsModule.forFeature([HomeEffects]),
     FormsModule
   ]

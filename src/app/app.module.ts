@@ -11,7 +11,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {AppRoutingModule} from './app-routing.module';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
-import * as fromApp from './app.reducer';
+import {metaReducers, reducers} from './app.reducer';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 
@@ -34,7 +34,7 @@ import {environment} from '../environments/environment';
       }
     }),
     AppRoutingModule,
-    StoreModule.forRoot(fromApp.appReducer),
+    StoreModule.forRoot(reducers, {metaReducers}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production})
   ],

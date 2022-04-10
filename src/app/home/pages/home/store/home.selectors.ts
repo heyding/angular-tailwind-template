@@ -1,10 +1,11 @@
 import {createFeatureSelector, createSelector} from '@ngrx/store';
-import * as fromHome from './home.reducer';
+import {AppStore} from '../../../../app.store';
+import {HomeState} from './home.store';
 
-export const selectHomeState = createFeatureSelector<fromHome.HomeState>(
-  fromHome.homeFeatureKey
-);
+const selectFeature = createFeatureSelector<AppStore, HomeState>('home');
 
-export const selectUserInput = createSelector(
-  selectHomeState, state => state.userInput
-);
+const selectUserInput = createSelector(selectFeature, homeState => homeState.userInput);
+
+export const HomeSelectors = {
+  selectUserInput: selectUserInput,
+};

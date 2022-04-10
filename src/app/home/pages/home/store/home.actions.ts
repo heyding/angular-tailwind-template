@@ -1,18 +1,12 @@
-import {Action} from '@ngrx/store';
+import {createAction, props} from '@ngrx/store';
 
 // Load Data is just a dummy action and is not used
-export const LOAD_DATA = '[HOME] LOAD_DATA';
-export const SET_USER_INPUT = '[HOME] SET_USER_INPUT';
+const loadData = createAction('[HOME] LOAD DATA');
+const getUserInput = createAction('[HOME] GET USER INPUT');
+const setUserInput = createAction('[HOME] SET USER INPUT', props<{ userInput: string }>());
 
-export class LoadData implements Action {
-  readonly type = LOAD_DATA;
+export const HomeActions = {
+  loadData,
+  getUserInput,
+  setUserInput
 }
-
-export class SetUserInput implements Action {
-  readonly type = SET_USER_INPUT;
-
-  constructor(public payload: string) {
-  }
-}
-
-export type HomeActions = LoadData | SetUserInput

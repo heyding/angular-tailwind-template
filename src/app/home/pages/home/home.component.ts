@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {map, Subscription} from 'rxjs';
+import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
-import * as HomeActions from './store/home.actions';
-import * as fromApp from '../../../app.reducer'
+import {HomeSelectors} from './store/home.selectors';
+import {HomeActions} from './store/home.actions';
 
 @Component({
   selector: 'app-home',
@@ -11,23 +11,27 @@ import * as fromApp from '../../../app.reducer'
 })
 export class HomeComponent implements OnInit {
 
+  userInput$: Observable<string> | undefined;
   userInput: string | undefined;
-  userInputSubscription: Subscription | undefined;
   displayUserInput: boolean = false;
 
-  constructor(private store: Store<fromApp.AppState>) {
+  constructor(private store: Store) {
   }
 
   ngOnInit(): void {
-    this.userInputSubscription = this.store.select('home').pipe(map(homeState => homeState.userInput)).subscribe((userInput: string) => {
-      this.userInput = userInput;
-    });
+    this.userInput$ = this.store.select(HomeSelectors.selectUserInput);
   }
 
-  storeUserInput() {
+  storeUserInput(userInput: string) {
     this.displayUserInput = true;
-    this.store.dispatch(new HomeActions.SetUserInput(this.userInput!));
-    this.userInputSubscription?.unsubscribe();
+    this.store.dispatch(HomeActions.setUserInput({userInput}));
+    this.userInput = '';
+  }
+
+  resetStore() {
+    this.displayUserInput = false;
+    this.store.dispatch(HomeActions.setUserInput({userInput: 'Hello world!'}));
+    this.userInput = '';
   }
 
   hideUserInput(): void {
