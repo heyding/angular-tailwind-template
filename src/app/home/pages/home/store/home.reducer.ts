@@ -10,7 +10,6 @@ export const initialHomeState: HomeState = {
   userInput: 'Hello world!'
 };
 
-
 export function homeReducer(state: HomeState = initialHomeState, action: HomeActions.HomeActions): HomeState {
   switch (action.type) {
     case HomeActions.SET_USER_INPUT:

@@ -24,8 +24,6 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // TODO: Check why the value is stored but not kept during a refresh of the browser tab
-
   storeUserInput() {
     this.displayUserInput = true;
     this.store.dispatch(new HomeActions.SetUserInput(this.userInput!));
