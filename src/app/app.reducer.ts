@@ -6,5 +6,5 @@ export interface AppState {
 }
 
 export const appReducer: ActionReducerMap<AppState, any> = {
-  home: fromHome.reducer
+  home: fromHome.homeReducer
 };

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
+import {map, Subscription} from 'rxjs';
 import {Store} from '@ngrx/store';
-import {selectUserInput} from './store/home.selectors';
-import {setUserInput} from './store/home.actions';
+import * as HomeActions from './store/home.actions';
+import * as fromApp from '../../../app.reducer'
 
 @Component({
   selector: 'app-home',
@@ -11,22 +11,28 @@ import {setUserInput} from './store/home.actions';
 })
 export class HomeComponent implements OnInit {
 
-  userInput$: Observable<string> | undefined;
+  userInput: string | undefined;
+  userInputSubscription: Subscription | undefined;
   displayUserInput: boolean = false;
 
-  constructor(private store: Store) {
+  constructor(private store: Store<fromApp.AppState>) {
   }
 
   ngOnInit(): void {
-    this.userInput$ = this.store.select(selectUserInput);
+    this.userInputSubscription = this.store.select('home').pipe(map(homeState => homeState.userInput)).subscribe((userInput: string) => {
+      this.userInput = userInput;
+    });
   }
 
-  storeUserInput(userInput: string) {
-    this.displayUserInput = false;
-    this.store.dispatch(setUserInput({userInput}));
-  }
+  // TODO: Check why the value is stored but not kept during a refresh of the browser tab
 
-  showUserInput(): void {
+  storeUserInput() {
     this.displayUserInput = true;
+    this.store.dispatch(new HomeActions.SetUserInput(this.userInput!));
+    this.userInputSubscription?.unsubscribe();
+  }
+
+  hideUserInput(): void {
+    this.displayUserInput = false;
   }
 }

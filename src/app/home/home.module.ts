@@ -29,7 +29,7 @@ import {FormsModule} from '@angular/forms';
     CommonModule,
     TranslateModule,
     RouterModule,
-    StoreModule.forFeature(fromHome.homeFeatureKey, fromHome.reducer),
+    StoreModule.forFeature(fromHome.homeFeatureKey, fromHome.homeReducer),
     EffectsModule.forFeature([HomeEffects]),
     FormsModule
   ]
