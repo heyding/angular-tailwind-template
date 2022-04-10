@@ -26,7 +26,11 @@
     "ngrx": {
       "title": "NGRX Test",
       "description": "We already implemented NGRX functionality. Type something, hit the button and refresh the browser tab to verify.",
-      "button": "Store input",
+      "button": {
+        "store": "Store input",
+        "reset": "Reset store"
+      },
+      "store": "Stored value is: ",
       "message": "Your input was: "
     }
   },

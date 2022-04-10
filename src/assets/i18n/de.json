@@ -26,7 +26,11 @@
     "ngrx": {
       "title": "NGRX Test",
       "description": "Wir haben NGRX Funktionalität schon implementiert. Schreibe etwas in die Textarea, drück den Button und aktualisiere den Browser Tab um das zu verifizieren.",
-      "button": "Input speichern",
+      "button": {
+        "store": "Input speichern",
+        "reset": "Store zurücksetzen"
+      },
+      "store": "Gespeicherter Wert: ",
       "message": "Deine Eingabe war: "
     }
   },
