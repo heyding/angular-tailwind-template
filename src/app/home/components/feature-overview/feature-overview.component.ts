@@ -3,7 +3,8 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'app-feature-overview',
   templateUrl: './feature-overview.component.html',
-  styleUrls: ['./feature-overview.component.css']
+  styleUrls: ['./feature-overview.component.css'],
+  standalone: false
 })
 
 export class FeatureOverviewComponent implements OnInit {
