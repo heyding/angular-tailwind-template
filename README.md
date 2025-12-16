@@ -1,34 +1,49 @@
 # Angular + Tailwind Template
 
-You can fork this template if you need a basic setup for an Angular project and want to use Tailwind CSS for the UI.
+Modern Angular 19 template with Tailwind CSS and Standalone Components.
 
-**Updated to Angular 19 and Tailwind CSS 3.4** with native Tailwind support (no custom webpack required).
+## Features
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and updated to version 19.2.
+- **Angular 19** - Standalone Components, functional routing
+- **Tailwind CSS 3.4** - Utility-first CSS framework
+- **NgRx 19** - State management
+- **i18n** - Multi-language support with ngx-translate
+- **TypeScript 5.6** - Strict mode enabled
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. If the website looks like the screenshot in "src/assets/img", Tailwind is set up and you can start coding.
+```bash
+# Install dependencies
+npm install
 
-## Build
+# Start dev server (http://localhost:4200)
+npm start
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Build for production
+npm run build
 
-## Tailwind components
+# Run tests
+npm test
 
-You will find some designed components at [tailwindui.com](https://tailwindui.com/). Just copy the HTML code into your components .html file.
+# Format code
+npm run format
+```
 
-## i18n
+## Project Structure
 
-This project uses ngx-translate to enable the translation into different language. It was set up by following this [guide](https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-angular-app-with-ngx-translate). You can add new language files in "src/assets/i18n".
+- `/src/app/core` - Header, Footer components
+- `/src/app/home` - Home page with NgRx state
+- `/src/assets/i18n` - Translation files (en.json, de.json)
 
-## NgRX
+## Customization
 
-This project uses NgRx functionality to keep a good overview of the state. It was set up by following this [guide](https://ngrx.io/guide/store/install) and can be used accordingly.
+- **Tailwind**: Edit `tailwind.config.ts` for theme customization
+- **Translations**: Add language files in `src/assets/i18n/`
+- **State**: Extend NgRx store in `src/app/home/store/`
 
-## Further help
+## Resources
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-To get more help on Tailwind configurations go check out the [Tailwind Documentation](https://tailwindcss.com/docs/installation) page.
-
+- [Angular Documentation](https://angular.io)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Tailwind UI Components](https://tailwindui.com)
+- [NgRx Documentation](https://ngrx.io)
