@@ -1,21 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import { Component, inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-language-switch',
   templateUrl: './language-switch.component.html',
-  styleUrls: ['./language-switch.component.css'],
-  standalone: false
+  styleUrl: './language-switch.component.css',
+  standalone: true
 })
-export class LanguageSwitchComponent implements OnInit {
-
-  constructor(private translate: TranslateService) { }
-
-  ngOnInit(): void {
-  }
+export class LanguageSwitchComponent {
+  private readonly translate = inject(TranslateService);
 
   useLanguage(language: string): void {
     this.translate.use(language);
   }
-
 }

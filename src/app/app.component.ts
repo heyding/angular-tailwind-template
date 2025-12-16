@@ -1,16 +1,21 @@
-import {Component} from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import { Component, inject } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  standalone: false
+  styleUrl: './app.component.css',
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent, FooterComponent]
 })
 export class AppComponent {
   title = 'angular-tailwind-template';
+  private readonly translate = inject(TranslateService);
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
+  constructor() {
+    this.translate.setDefaultLang('en');
   }
 }
