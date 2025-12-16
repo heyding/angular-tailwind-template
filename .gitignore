@@ -37,6 +37,13 @@ yarn-error.log
 testem.log
 /typings
 
+# Environment files (optional - uncomment if needed)
+# .env
+# .env.local
+
 # System files
 .DS_Store
 Thumbs.db
+
+# Prettier
+.prettierignore
