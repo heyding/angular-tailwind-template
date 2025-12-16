@@ -1,4 +1,4 @@
-import {createAction, props} from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
 // Load Data is just a dummy action and is not used
 const loadData = createAction('[HOME] LOAD DATA');
@@ -8,5 +8,5 @@ const setUserInput = createAction('[HOME] SET USER INPUT', props<{ userInput: st
 export const HomeActions = {
   loadData,
   getUserInput,
-  setUserInput
-}
+  setUserInput,
+};

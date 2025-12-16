@@ -12,7 +12,7 @@ export function localStorageSyncReducer(reducer: ActionReducer<AppStore>): Actio
   return localStorageSync({
     keys: [homeFeatureKey],
     rehydrate: true,
-    storage: window.sessionStorage
+    storage: window.sessionStorage,
   })(reducer);
 }
 

@@ -7,6 +7,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   standalone: true,
-  imports: [RouterLink, TranslateModule]
+  imports: [RouterLink, TranslateModule],
 })
 export class HeaderComponent {}

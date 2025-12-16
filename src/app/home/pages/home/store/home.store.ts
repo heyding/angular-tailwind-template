@@ -5,5 +5,5 @@ export interface HomeState {
 }
 
 export const defaultHomeStore: HomeState = {
-  userInput: 'Hello world!'
-}
+  userInput: 'Hello world!',
+};

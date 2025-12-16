@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AboutComponent } from './about.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -8,12 +8,9 @@ describe('AboutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AboutComponent ]
-    })
-    .compileComponents();
-  });
+      imports: [AboutComponent, TranslateModule.forRoot()],
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(AboutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

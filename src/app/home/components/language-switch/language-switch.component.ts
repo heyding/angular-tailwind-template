@@ -5,7 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'app-language-switch',
   templateUrl: './language-switch.component.html',
   styleUrl: './language-switch.component.css',
-  standalone: true
+  standalone: true,
 })
 export class LanguageSwitchComponent {
   private readonly translate = inject(TranslateService);

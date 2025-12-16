@@ -27,16 +27,16 @@ export const appConfig: ApplicationConfig = {
     provideEffects([]),
     provideStoreDevtools({
       maxAge: 25,
-      logOnly: environment.production
+      logOnly: environment.production,
     }),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-        }
+          deps: [HttpClient],
+        },
       })
-    )
-  ]
+    ),
+  ],
 };

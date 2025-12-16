@@ -1,15 +1,12 @@
-import {Injectable} from '@angular/core';
-import {Actions, createEffect, ofType} from '@ngrx/effects';
+import { Injectable } from '@angular/core';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 
-import {concatMap} from 'rxjs/operators';
-import {EMPTY, Observable} from 'rxjs';
-import {HomeActions} from './home.actions';
-
+import { concatMap } from 'rxjs/operators';
+import { EMPTY, Observable } from 'rxjs';
+import { HomeActions } from './home.actions';
 
 @Injectable()
 export class HomeEffects {
-
-
   loadData$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(HomeActions.loadData),
@@ -18,8 +15,5 @@ export class HomeEffects {
     );
   });
 
-
-  constructor(private actions$: Actions) {
-  }
-
+  constructor(private actions$: Actions) {}
 }

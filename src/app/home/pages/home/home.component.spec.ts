@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HomeComponent } from './home.component';
+import { provideStore } from '@ngrx/store';
+import { TranslateModule } from '@ngx-translate/core';
+import { reducers, metaReducers } from '../../../app.reducer';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -8,12 +10,10 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
-    })
-    .compileComponents();
-  });
+      imports: [HomeComponent, TranslateModule.forRoot()],
+      providers: [provideStore(reducers, { metaReducers })],
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

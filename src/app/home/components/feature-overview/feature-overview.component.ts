@@ -7,14 +7,12 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './feature-overview.component.html',
   styleUrl: './feature-overview.component.css',
   standalone: true,
-  imports: [CommonModule, TranslateModule]
+  imports: [CommonModule, TranslateModule],
 })
 export class FeatureOverviewComponent implements OnInit {
   features: string[] = [];
 
   ngOnInit(): void {
-    this.features = [
-      'tailwind', 'routing', 'i18n', 'directory', 'ngrx'
-    ];
+    this.features = ['tailwind', 'routing', 'i18n', 'directory', 'ngrx'];
   }
 }

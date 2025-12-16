@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FeatureOverviewComponent } from './feature-overview.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('FeatureOverviewComponent', () => {
   let component: FeatureOverviewComponent;
@@ -8,12 +8,9 @@ describe('FeatureOverviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeatureOverviewComponent ]
-    })
-    .compileComponents();
-  });
+      imports: [FeatureOverviewComponent, TranslateModule.forRoot()],
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(FeatureOverviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

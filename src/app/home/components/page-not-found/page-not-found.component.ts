@@ -6,6 +6,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './page-not-found.component.html',
   styleUrl: './page-not-found.component.css',
   standalone: true,
-  imports: [TranslateModule]
+  imports: [TranslateModule],
 })
 export class PageNotFoundComponent {}

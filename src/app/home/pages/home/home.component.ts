@@ -14,7 +14,13 @@ import { LanguageSwitchComponent } from '../../components/language-switch/langua
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, FeatureOverviewComponent, LanguageSwitchComponent]
+  imports: [
+    CommonModule,
+    FormsModule,
+    TranslateModule,
+    FeatureOverviewComponent,
+    LanguageSwitchComponent,
+  ],
 })
 export class HomeComponent implements OnInit {
   private readonly store = inject(Store);

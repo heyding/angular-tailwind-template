@@ -9,7 +9,7 @@ import { FooterComponent } from './core/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent]
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
 })
 export class AppComponent {
   title = 'angular-tailwind-template';
