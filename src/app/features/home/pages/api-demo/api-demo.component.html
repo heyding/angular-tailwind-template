@@ -1,0 +1,148 @@
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-white dark:bg-gray-900 min-h-screen">
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      {{ 'api.title' | translate }}
+    </h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300">
+      {{ 'api.subtitle' | translate }}
+    </p>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+      {{ 'api.actions' | translate }}
+    </h2>
+    <div class="flex flex-wrap gap-3">
+      <app-button (click)="loadUsers()" variant="primary">
+        {{ 'api.loadUsers' | translate }}
+      </app-button>
+      <app-button (click)="loadPosts()" variant="secondary">
+        {{ 'api.loadPosts' | translate }}
+      </app-button>
+      <app-button (click)="createPost()" variant="outline">
+        {{ 'api.createPost' | translate }}
+      </app-button>
+      <app-button (click)="testLoadingState()" variant="ghost">
+        {{ 'api.testLoading' | translate }}
+      </app-button>
+      <app-button (click)="triggerError()" variant="danger">
+        {{ 'api.triggerError' | translate }}
+      </app-button>
+    </div>
+  </div>
+
+  <!-- Users Section -->
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+      {{ 'api.users' | translate }}
+    </h2>
+    @if (users.length > 0) {
+      <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+          <thead class="bg-gray-50 dark:bg-gray-900">
+            <tr>
+              <th
+                class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+              >
+                ID
+              </th>
+              <th
+                class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+              >
+                {{ 'api.name' | translate }}
+              </th>
+              <th
+                class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+              >
+                {{ 'api.email' | translate }}
+              </th>
+              <th
+                class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+              >
+                {{ 'api.actions' | translate }}
+              </th>
+            </tr>
+          </thead>
+          <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+            @for (user of users; track user.id) {
+              <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                  {{ user.id }}
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  {{ user.name }}
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                  {{ user.email }}
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                  <app-button (click)="loadPosts(user.id)" variant="ghost" size="sm">
+                    {{ 'api.viewPosts' | translate }}
+                  </app-button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    } @else {
+      <p class="text-gray-500 dark:text-gray-400 text-center py-8">
+        {{ 'api.noUsers' | translate }}
+      </p>
+    }
+  </div>
+
+  <!-- Posts Section -->
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+      {{ 'api.posts' | translate }}
+    </h2>
+    @if (posts.length > 0) {
+      <div class="space-y-4">
+        @for (post of posts; track post.id) {
+          <div
+            class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-blue-300 dark:hover:border-blue-600 transition-colors"
+          >
+            <div class="flex justify-between items-start">
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  {{ post.title }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">{{ post.body }}</p>
+                <p class="text-xs text-gray-400 dark:text-gray-500 mt-2">
+                  {{ 'api.postId' | translate }}: {{ post.id }} | {{ 'api.userId' | translate }}:
+                  {{ post.userId }}
+                </p>
+              </div>
+              <app-button (click)="deletePost(post.id)" variant="danger" size="sm">
+                {{ 'api.delete' | translate }}
+              </app-button>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <p class="text-gray-500 dark:text-gray-400 text-center py-8">
+        {{ 'api.noPosts' | translate }}
+      </p>
+    }
+  </div>
+
+  <!-- Info Box -->
+  <div
+    class="mt-8 bg-blue-50 dark:bg-blue-900 dark:bg-opacity-20 border border-blue-200 dark:border-blue-800 rounded-lg p-6"
+  >
+    <h3 class="text-lg font-semibold text-blue-900 dark:text-blue-300 mb-2">
+      {{ 'api.infoTitle' | translate }}
+    </h3>
+    <ul class="list-disc list-inside text-sm text-blue-800 dark:text-blue-400 space-y-1">
+      <li>{{ 'api.info1' | translate }}</li>
+      <li>{{ 'api.info2' | translate }}</li>
+      <li>{{ 'api.info3' | translate }}</li>
+      <li>{{ 'api.info4' | translate }}</li>
+    </ul>
+  </div>
+</div>

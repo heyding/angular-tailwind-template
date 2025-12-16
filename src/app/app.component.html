@@ -1,3 +1,12 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+  <app-header></app-header>
+  <div class="pb-24">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<!-- Global UI Components -->
+<app-toast-container></app-toast-container>
+<app-modal></app-modal>
+<app-loading-spinner></app-loading-spinner>

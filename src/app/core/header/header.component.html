@@ -1,45 +1,101 @@
-<header class="bg-indigo-600">
+<header
+  class="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90"
+>
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-    <div
-      class="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none"
-    >
-      <div class="flex items-center">
-        <a routerLink="/home" href="#">
-          <span class="sr-only">App</span>
-          <img
-            class="h-10 w-auto"
-            src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white"
-            alt=""
-          />
+    <div class="w-full py-4 flex items-center justify-between">
+      <div class="flex items-center gap-8">
+        <a routerLink="/home" class="flex items-center gap-2 group">
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform"
+          >
+            <span class="text-white font-bold text-xl">A</span>
+          </div>
+          <span class="font-bold text-xl text-gray-900 dark:text-white hidden sm:block"
+            >Angular SPA</span
+          >
         </a>
-        <div class="hidden ml-10 space-x-8 lg:block">
-          <!--          <a class="text-base font-medium text-white hover:text-indigo-50"> {{ 'header.menu.solutions' | translate }} </a>-->
-          <!--          <a class="text-base font-medium text-white hover:text-indigo-50"> {{ 'header.menu.pricing' | translate }} </a>-->
-          <!--          <a class="text-base font-medium text-white hover:text-indigo-50"> {{ 'header.menu.docs' | translate }} </a>-->
-          <a routerLink="/about" class="text-base font-medium text-white hover:text-indigo-50">
+        <div class="hidden lg:flex lg:items-center lg:gap-1">
+          <a
+            routerLink="/about"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+          >
             {{ 'header.menu.company' | translate }}
+          </a>
+          <a
+            routerLink="/components"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+          >
+            {{ 'header.menu.components' | translate }}
+          </a>
+          <a
+            routerLink="/api-demo"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+          >
+            {{ 'header.menu.api' | translate }}
+          </a>
+          <a
+            routerLink="/features-demo"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+          >
+            {{ 'header.menu.features' | translate }}
+          </a>
+          <a
+            routerLink="/admin"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+          >
+            {{ 'header.menu.admin' | translate }}
           </a>
         </div>
       </div>
-      <div class="ml-10 space-x-4">
-        <a
-          href="#"
-          class="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
-          >{{ 'header.button.sign-in' | translate }}</a
-        >
-        <a
-          href="#"
-          class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-indigo-600 hover:bg-indigo-50"
-          >{{ 'header.button.sign-up' | translate }}</a
-        >
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <app-theme-toggle></app-theme-toggle>
+
+        @if (isAuthenticated$ | async) {
+          <button
+            (click)="logout()"
+            class="px-4 py-2 rounded-lg text-sm font-medium bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 transition-all shadow-sm hover:shadow-md"
+          >
+            {{ 'header.button.sign-out' | translate }}
+          </button>
+        } @else {
+          <a
+            routerLink="/login"
+            class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+          >
+            {{ 'header.button.sign-in' | translate }}
+          </a>
+          <a
+            href="#"
+            class="px-4 py-2 rounded-lg text-sm font-medium bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 transition-all shadow-sm hover:shadow-md"
+          >
+            {{ 'header.button.sign-up' | translate }}
+          </a>
+        }
       </div>
     </div>
-    <div class="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
-      <!--      <a class="text-base font-medium text-white hover:text-indigo-50"> {{ 'header.menu.solutions' | translate }} </a>-->
-      <!--      <a class="text-base font-medium text-white hover:text-indigo-50"> {{ 'header.menu.pricing' | translate }} </a>-->
-      <!--      <a class="text-base font-medium text-white hover:text-indigo-50"> {{ 'header.menu.docs' | translate }} </a>-->
-      <a routerLink="/about" class="text-base font-medium text-white hover:text-indigo-50">
+    <div
+      class="py-3 flex flex-wrap justify-center gap-2 lg:hidden border-t border-gray-200 dark:border-gray-800"
+    >
+      <!-- Mobile Navigation -->
+      <a
+        routerLink="/home"
+        class="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+      >
+        <app-icon [name]="'home'" [size]="'sm'" [customClass]="'text-current'"></app-icon>
+        <span>{{ 'header.menu.home' | translate }}</span>
+      </a>
+      <a
+        routerLink="/about"
+        class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+      >
         {{ 'header.menu.company' | translate }}
+      </a>
+      <a
+        routerLink="/components"
+        class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+      >
+        {{ 'header.menu.components' | translate }}
       </a>
     </div>
   </nav>

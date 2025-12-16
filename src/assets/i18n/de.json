@@ -4,11 +4,17 @@
       "solutions": "Lösungen",
       "pricing": "Preise",
       "docs": "Dokumentation",
-      "company": "Über uns"
+      "company": "Unternehmen",
+      "home": "Startseite",
+      "components": "Komponenten",
+      "api": "API Demo",
+      "features": "Features",
+      "admin": "Admin"
     },
     "button": {
       "sign-in": "Anmelden",
-      "sign-up": "Registrieren"
+      "sign-up": "Registrieren",
+      "sign-out": "Abmelden"
     }
   },
   "footer": {
@@ -57,7 +63,102 @@
       "ngrx": {
         "title": "NgRX",
         "description": "NgRx ist vorkonfiguriert. Du brauchst nichts zu installieren und kannst direkt Actions, Reducer und Effects für deine Feautes anlegen."
+      },
+      "standalone": {
+        "title": "Standalone Components",
+        "description": "Angular 19 mit Standalone Components Architektur. Moderner, modulfreier Ansatz mit vereinfachtem Dependency Management."
+      },
+      "http": {
+        "title": "HTTP Client & API",
+        "description": "Vollständiger HTTP Service mit RESTful API Beispielen (GET, POST, PUT, DELETE). Einsatzbereiter Service mit TypeScript Interfaces."
+      },
+      "interceptors": {
+        "title": "HTTP Interceptors",
+        "description": "Funktionale Interceptors für Authentifizierung (JWT), Ladezustände und globale Fehlerbehandlung mit Toast-Benachrichtigungen."
+      },
+      "auth": {
+        "title": "Authentifizierung",
+        "description": "Vollständiges Authentifizierungssystem mit Login/Logout, Route Guards, localStorage-Persistenz und reaktivem Auth-State-Management."
+      },
+      "forms": {
+        "title": "Reactive Forms",
+        "description": "Formularvalidierung mit benutzerdefinierten Fehlermeldungen, i18n-Unterstützung und Integration mit UI-Komponenten."
+      },
+      "components": {
+        "title": "UI-Komponenten",
+        "description": "Professionelle Komponentenbibliothek: Button, Modal, Toast-Benachrichtigungen, Icon-System und Loading-Spinner mit Tailwind CSS."
+      },
+      "loading": {
+        "title": "Ladezustände",
+        "description": "Automatische Ladeindikatoren für alle HTTP-Anfragen mit Counter-Pattern für gleichzeitige Anfragen."
+      },
+      "lazyLoading": {
+        "title": "Lazy Loading",
+        "description": "Routenbasiertes Code-Splitting mit lazy-geladenen Feature-Modulen. Der Admin-Bereich demonstriert On-Demand-Laden für bessere Performance."
+      },
+      "table": {
+        "title": "Table Component",
+        "description": "Vollausgestattete Datentabelle mit Sortierung, Filterung, Paginierung und Zeilenauswahl. OnPush-optimiert mit TypeScript Generics."
+      },
+      "pipes": {
+        "title": "Custom Pipes",
+        "description": "Wiederverwendbare Pipes für Textkürzung, Zahlenformatierung, relative Zeitanzeige und Such-Highlighting."
+      },
+      "directives": {
+        "title": "Custom Directives",
+        "description": "Utility-Direktiven für Hover-Highlighting, Tooltips und Click-Outside-Erkennung. Verbessern die UX mit minimalem Code."
+      },
+      "retry": {
+        "title": "HTTP Retry Logic",
+        "description": "Automatischer Wiederholungsmechanismus mit exponentiellem Backoff für fehlgeschlagene Anfragen. Intelligentes Retry nur für GET-Requests und Netzwerkfehler."
+      },
+      "performance": {
+        "title": "Performance-Optimiert",
+        "description": "OnPush Change Detection, trackBy-Funktionen, Lazy Loading und Code-Splitting für optimale Angular-Performance."
+      },
+      "darkMode": {
+        "title": "Dark Mode",
+        "description": "Signal-basierter Theme-Service mit localStorage-Persistenz, Systemeinstellungs-Erkennung und Tailwind CSS Dark-Mode-Klassen."
+      },
+      "virtualScroll": {
+        "title": "Virtuelles Scrollen",
+        "description": "CDK Virtual Scroll für effizientes Rendering großer Listen (10.000+ Elemente). Nur sichtbare Elemente werden im DOM gerendert."
+      },
+      "dragDrop": {
+        "title": "Drag & Drop",
+        "description": "Angular CDK Drag & Drop für sortierbare Listen und Kanban-Boards. Sanfte Animationen und Touch-Support inklusive."
+      },
+      "skeleton": {
+        "title": "Skeleton Loader",
+        "description": "Wiederverwendbare Skeleton-Komponenten für Cards, Tabellen und Text. Verbessert die wahrgenommene Performance beim Laden."
+      },
+      "errorHandler": {
+        "title": "Global Error Handler",
+        "description": "Zentralisierte Fehlerbehandlung mit benutzerfreundlichen Meldungen, automatischen Toast-Benachrichtigungen und Remote-Logging-Support."
+      },
+      "logger": {
+        "title": "Logger Service",
+        "description": "Strukturierter Logging-Service mit Log-Levels (debug, info, warn, error). Bereit für Remote-Logging-Integration."
+      },
+      "featureFlags": {
+        "title": "Feature Flags",
+        "description": "Signal-basiertes Feature-Toggle-System mit localStorage-Persistenz. Kontrolle über Feature-Rollout und A/B-Testing."
       }
+    },
+    "demo": {
+      "title": "Erweiterte Features Demo",
+      "subtitle": "Demonstration von Table Component, Custom Pipes und Custom Directives",
+      "table": {
+        "title": "Table Component",
+        "description": "Vollausgestattete Tabelle mit Sortierung, Filterung, Paginierung und Zeilenauswahl"
+      },
+      "pipes": {
+        "title": "Custom Pipes"
+      },
+      "directives": {
+        "title": "Custom Directives"
+      },
+      "performanceInfo": "Diese Komponente verwendet OnPush Change Detection Strategy für optimale Performance!"
     }
   },
   "about": {
@@ -71,5 +172,153 @@
     "button": {
       "back-to-start": "Zurück zur Startseite"
     }
+  },
+  "components": {
+    "title": "Komponenten Demo",
+    "icon": {
+      "title": "Icon Komponente",
+      "available": "Verfügbare Icons",
+      "sizes": "Größen"
+    },
+    "button": {
+      "title": "Button Komponente",
+      "variants": "Varianten",
+      "primary": "Primär",
+      "secondary": "Sekundär",
+      "outline": "Umrandung",
+      "ghost": "Ghost",
+      "danger": "Gefahr",
+      "sizes": "Größen",
+      "small": "Klein",
+      "medium": "Mittel",
+      "large": "Groß",
+      "states": "Zustände",
+      "enabled": "Aktiviert",
+      "disabled": "Deaktiviert",
+      "full-width": "Volle Breite",
+      "full-width-button": "Button mit voller Breite"
+    },
+    "toast": {
+      "title": "Toast Benachrichtigungen",
+      "success": "Erfolgs-Toast",
+      "error": "Fehler-Toast",
+      "warning": "Warn-Toast",
+      "info": "Info-Toast"
+    },
+    "modal": {
+      "title": "Modal Dialog",
+      "open-confirmation": "Bestätigungs-Modal öffnen",
+      "open-info": "Info-Modal öffnen",
+      "open-delete": "Lösch-Modal öffnen",
+      "last-result": "Letztes Modal-Ergebnis:",
+      "confirm-title": "Aktion bestätigen",
+      "confirm-message": "Sind Sie sicher, dass Sie mit dieser Aktion fortfahren möchten?",
+      "confirm-yes": "Ja, fortfahren",
+      "confirm-cancel": "Abbrechen",
+      "info-title": "Information",
+      "info-message": "Dies ist ein informatives Modal-Fenster.",
+      "info-ok": "Verstanden",
+      "delete-title": "Element löschen",
+      "delete-message": "Sind Sie sicher, dass Sie dieses Element löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "delete-confirm": "Löschen",
+      "delete-cancel": "Behalten",
+      "result-confirmed": "Bestätigt ✓",
+      "result-cancelled": "Abgebrochen ✗",
+      "result-acknowledged": "Zur Kenntnis genommen ✓",
+      "result-deleted": "Gelöscht ✓",
+      "toast-result": "Modal-Ergebnis:",
+      "toast-deleted": "Element erfolgreich gelöscht",
+      "toast-cancelled": "Löschvorgang abgebrochen"
+    },
+    "usage": {
+      "title": "Verwendungsbeispiel"
+    },
+    "messages": {
+      "success": "Vorgang erfolgreich abgeschlossen!",
+      "error": "Etwas ist schief gelaufen!",
+      "warning": "Bitte seien Sie vorsichtig!",
+      "info": "Dies ist eine informative Nachricht."
+    }
+  },
+  "login": {
+    "title": "Bei Ihrem Konto anmelden",
+    "subtitle": "Willkommen zurück! Bitte geben Sie Ihre Zugangsdaten ein.",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "submit": "Anmelden",
+    "submitting": "Wird angemeldet...",
+    "demoInfo": "Demo-Zugangsdaten",
+    "demoEmail": "E-Mail: demo@example.com",
+    "demoPassword": "Passwort: beliebiges Passwort (6+ Zeichen)",
+    "email.required": "E-Mail ist erforderlich",
+    "email.invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "password.required": "Passwort ist erforderlich",
+    "password.minLength": "Passwort muss mindestens 6 Zeichen lang sein"
+  },
+  "api": {
+    "title": "API Demo",
+    "subtitle": "Demonstration von HTTP Client, Interceptors, Ladezuständen und Fehlerbehandlung",
+    "actions": "Aktionen",
+    "loadUsers": "Benutzer laden",
+    "loadPosts": "Beiträge laden",
+    "createPost": "Beitrag erstellen",
+    "testLoading": "Ladezustand testen",
+    "triggerError": "Fehler auslösen",
+    "users": "Benutzer",
+    "posts": "Beiträge",
+    "name": "Name",
+    "email": "E-Mail",
+    "viewPosts": "Beiträge anzeigen",
+    "delete": "Löschen",
+    "noUsers": "Keine Benutzer geladen. Klicken Sie auf 'Benutzer laden', um Daten abzurufen.",
+    "noPosts": "Keine Beiträge geladen. Klicken Sie auf 'Beiträge laden', um Daten abzurufen.",
+    "postId": "Beitrags-ID",
+    "userId": "Benutzer-ID",
+    "infoTitle": "Was wird hier demonstriert",
+    "info1": "HTTP Client mit GET, POST, DELETE Operationen",
+    "info2": "Loading Interceptor - automatischer Lade-Spinner",
+    "info3": "Error Interceptor - automatische Fehlerbehandlung mit Toast-Benachrichtigungen",
+    "info4": "Auth Interceptor - automatisches Einfügen von JWT-Token (wenn angemeldet)"
+  },
+  "table": {
+    "noData": "Keine Daten verfügbar",
+    "showing": "Zeige",
+    "to": "bis",
+    "of": "von",
+    "perPage": "pro Seite"
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "subtitle": "Willkommen im lazy-loaded Admin-Bereich",
+      "totalUsers": "Benutzer gesamt",
+      "activeUsers": "Aktive Benutzer",
+      "avgResponseTime": "Durchschn. Antwortzeit",
+      "errors": "Fehler",
+      "lazyLoadedInfo": "Dieser gesamte Admin-Bereich wird lazy-loaded! Prüfen Sie die Browser-Netzwerk-Tab, um zu sehen, dass er bei Bedarf geladen wurde."
+    },
+    "users": {
+      "title": "Benutzerverwaltung",
+      "subtitle": "Verwalten Sie alle Benutzer im System",
+      "name": "Name",
+      "email": "E-Mail",
+      "website": "Webseite",
+      "noUsers": "Keine Benutzer gefunden",
+      "lazyLoadedInfo": "Diese Seite demonstriert Lazy Loading mit routenbasiertem Code-Splitting."
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "subtitle": "Konfigurieren Sie Ihre Anwendung",
+      "generalSettings": "Allgemeine Einstellungen",
+      "content": "Einstellungen-Inhalt kommt hier hin..."
+    }
+  },
+  "virtualScroll": {
+    "title": "Virtuelles Scrollen",
+    "description": "Effiziente Darstellung großer Listen (10.000+ Elemente) mit CDK Virtual Scroll. Nur sichtbare Elemente werden im DOM gerendert."
+  },
+  "dragDrop": {
+    "title": "Drag & Drop",
+    "description": "Ziehen Sie Aufgaben zwischen Spalten, um Ihren Workflow zu verwalten. Erstellt mit Angular CDK Drag & Drop."
   }
 }

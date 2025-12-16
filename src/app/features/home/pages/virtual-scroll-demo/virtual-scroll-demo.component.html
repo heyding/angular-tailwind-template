@@ -1,0 +1,69 @@
+<div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+        {{ 'virtualScroll.title' | translate }}
+      </h1>
+      <p class="text-gray-600 dark:text-gray-400">
+        {{ 'virtualScroll.description' | translate }}
+      </p>
+      <p class="text-sm text-gray-500 dark:text-gray-500 mt-2">
+        Rendering {{ items.length | number }} items with virtual scrolling (only visible items are
+        in DOM)
+      </p>
+    </div>
+
+    <!-- Virtual Scroll Container -->
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+      <cdk-virtual-scroll-viewport [itemSize]="itemHeight" class="h-[600px]">
+        <div
+          *cdkVirtualFor="let item of items; trackBy: trackByFn"
+          class="border-b border-gray-200 dark:border-gray-700 p-4 hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors"
+          [style.height.px]="itemHeight"
+        >
+          <div class="flex items-start justify-between">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-xs font-medium text-gray-500 dark:text-gray-400">
+                  #{{ item.id }}
+                </span>
+                <span
+                  [class]="getCategoryColor(item.category)"
+                  class="px-2 py-1 text-xs font-medium rounded-full"
+                >
+                  {{ item.category }}
+                </span>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1 truncate">
+                {{ item.title }}
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                {{ item.description }}
+              </p>
+            </div>
+            <div class="ml-4 text-xs text-gray-500 dark:text-gray-500 whitespace-nowrap">
+              {{ item.timestamp | date: 'short' }}
+            </div>
+          </div>
+        </div>
+      </cdk-virtual-scroll-viewport>
+    </div>
+
+    <!-- Info Box -->
+    <div
+      class="mt-8 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6"
+    >
+      <h3 class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">
+        💡 Performance Benefits
+      </h3>
+      <ul class="space-y-2 text-sm text-blue-800 dark:text-blue-200">
+        <li>✅ Only renders visible items + buffer</li>
+        <li>✅ Handles 10,000+ items smoothly</li>
+        <li>✅ Constant memory usage regardless of list size</li>
+        <li>✅ Native scrolling performance</li>
+        <li>✅ Automatic viewport management</li>
+      </ul>
+    </div>
+  </div>
+</div>

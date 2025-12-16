@@ -1,0 +1,105 @@
+<div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+        {{ 'dragDrop.title' | translate }}
+      </h1>
+      <p class="text-gray-600 dark:text-gray-400">
+        {{ 'dragDrop.description' | translate }}
+      </p>
+    </div>
+
+    <!-- Kanban Board -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- To Do Column -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+          <span class="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+          To Do ({{ todo.length }})
+        </h2>
+        <div
+          cdkDropList
+          #todoList="cdkDropList"
+          [cdkDropListData]="todo"
+          [cdkDropListConnectedTo]="[inProgressList, doneList]"
+          class="min-h-[400px] space-y-3"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div
+            *ngFor="let task of todo"
+            cdkDrag
+            class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg cursor-move hover:shadow-md transition-shadow border-2 border-transparent hover:border-red-300 dark:hover:border-red-700"
+          >
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ task.title }}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">{{ task.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- In Progress Column -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+          <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+          In Progress ({{ inProgress.length }})
+        </h2>
+        <div
+          cdkDropList
+          #inProgressList="cdkDropList"
+          [cdkDropListData]="inProgress"
+          [cdkDropListConnectedTo]="[todoList, doneList]"
+          class="min-h-[400px] space-y-3"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div
+            *ngFor="let task of inProgress"
+            cdkDrag
+            class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg cursor-move hover:shadow-md transition-shadow border-2 border-transparent hover:border-yellow-300 dark:hover:border-yellow-700"
+          >
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ task.title }}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">{{ task.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Done Column -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+          <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+          Done ({{ done.length }})
+        </h2>
+        <div
+          cdkDropList
+          #doneList="cdkDropList"
+          [cdkDropListData]="done"
+          [cdkDropListConnectedTo]="[todoList, inProgressList]"
+          class="min-h-[400px] space-y-3"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div
+            *ngFor="let task of done"
+            cdkDrag
+            class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg cursor-move hover:shadow-md transition-shadow border-2 border-transparent hover:border-green-300 dark:hover:border-green-700"
+          >
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ task.title }}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">{{ task.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Box -->
+    <div
+      class="mt-8 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6"
+    >
+      <h3 class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">🎯 Features</h3>
+      <ul class="space-y-2 text-sm text-blue-800 dark:text-blue-200">
+        <li>✅ Drag tasks between columns</li>
+        <li>✅ Reorder within same column</li>
+        <li>✅ Visual feedback on hover</li>
+        <li>✅ Smooth animations</li>
+        <li>✅ Touch-enabled for mobile</li>
+      </ul>
+    </div>
+  </div>
+</div>

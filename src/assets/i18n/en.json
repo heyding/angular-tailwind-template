@@ -4,11 +4,17 @@
       "solutions": "Solutions",
       "pricing": "Pricing",
       "docs": "Docs",
-      "company": "Company"
+      "company": "Company",
+      "home": "Home",
+      "components": "Components",
+      "api": "API Demo",
+      "features": "Features",
+      "admin": "Admin"
     },
     "button": {
       "sign-in": "Sign In",
-      "sign-up": "Sign Up"
+      "sign-up": "Sign Up",
+      "sign-out": "Sign Out"
     }
   },
   "footer": {
@@ -57,7 +63,102 @@
       "ngrx": {
         "title": "NgRX",
         "description": "NgRx is preconfigured. You do not need to install anything and are able to create actions, reducers and effects for your features."
+      },
+      "standalone": {
+        "title": "Standalone Components",
+        "description": "Angular 19 with Standalone Components architecture. Modern, module-free approach with simplified dependency management."
+      },
+      "http": {
+        "title": "HTTP Client & API",
+        "description": "Complete HTTP service with RESTful API examples (GET, POST, PUT, DELETE). Ready-to-use service with TypeScript interfaces."
+      },
+      "interceptors": {
+        "title": "HTTP Interceptors",
+        "description": "Functional interceptors for authentication (JWT), loading states, and global error handling with toast notifications."
+      },
+      "auth": {
+        "title": "Authentication",
+        "description": "Full authentication system with login/logout, route guards, localStorage persistence, and reactive auth state management."
+      },
+      "forms": {
+        "title": "Reactive Forms",
+        "description": "Form validation with custom error messages, i18n support, and integration with UI components."
+      },
+      "components": {
+        "title": "UI Components",
+        "description": "Professional component library: Button, Modal, Toast notifications, Icon system, and Loading spinner with Tailwind CSS."
+      },
+      "loading": {
+        "title": "Loading States",
+        "description": "Automatic loading indicators for all HTTP requests with counter pattern for concurrent requests."
+      },
+      "lazyLoading": {
+        "title": "Lazy Loading",
+        "description": "Route-based code splitting with lazy-loaded feature modules. Admin section demonstrates on-demand loading for better performance."
+      },
+      "table": {
+        "title": "Table Component",
+        "description": "Full-featured data table with sorting, filtering, pagination, and row selection. OnPush optimized with TypeScript generics."
+      },
+      "pipes": {
+        "title": "Custom Pipes",
+        "description": "Reusable pipes for text truncation, number formatting, relative time display, and search highlighting."
+      },
+      "directives": {
+        "title": "Custom Directives",
+        "description": "Utility directives for hover highlighting, tooltips, and click-outside detection. Enhance UX with minimal code."
+      },
+      "retry": {
+        "title": "HTTP Retry Logic",
+        "description": "Automatic retry mechanism with exponential backoff for failed requests. Intelligent retry only for GET requests and network errors."
+      },
+      "performance": {
+        "title": "Performance Optimized",
+        "description": "OnPush change detection, trackBy functions, lazy loading, and code splitting for optimal Angular performance."
+      },
+      "darkMode": {
+        "title": "Dark Mode",
+        "description": "Signal-based theme service with localStorage persistence, system preference detection, and Tailwind CSS dark mode classes."
+      },
+      "virtualScroll": {
+        "title": "Virtual Scrolling",
+        "description": "CDK Virtual Scroll for efficient rendering of large lists (10,000+ items). Only visible items are rendered in DOM."
+      },
+      "dragDrop": {
+        "title": "Drag & Drop",
+        "description": "Angular CDK Drag & Drop for sortable lists and Kanban boards. Smooth animations and touch support included."
+      },
+      "skeleton": {
+        "title": "Skeleton Loaders",
+        "description": "Reusable skeleton components for cards, tables, and text. Improve perceived performance during data loading."
+      },
+      "errorHandler": {
+        "title": "Global Error Handler",
+        "description": "Centralized error handling with user-friendly messages, automatic toast notifications, and remote logging support."
+      },
+      "logger": {
+        "title": "Logger Service",
+        "description": "Structured logging service with log levels (debug, info, warn, error). Ready for remote logging integration."
+      },
+      "featureFlags": {
+        "title": "Feature Flags",
+        "description": "Signal-based feature toggle system with localStorage persistence. Control feature rollout and A/B testing."
       }
+    },
+    "demo": {
+      "title": "Advanced Features Demo",
+      "subtitle": "Demonstrating Table Component, Custom Pipes, and Custom Directives",
+      "table": {
+        "title": "Table Component",
+        "description": "Full-featured table with sorting, filtering, pagination, and row selection"
+      },
+      "pipes": {
+        "title": "Custom Pipes"
+      },
+      "directives": {
+        "title": "Custom Directives"
+      },
+      "performanceInfo": "This component uses OnPush change detection strategy for optimal performance!"
     }
   },
   "about": {
@@ -67,9 +168,157 @@
   "404": {
     "title": "404 error",
     "headline": "Page not found.",
-    "text": "Sorry, we couldn’t find the page you’re looking for.",
+    "text": "Sorry, we couldn't find the page you're looking for.",
     "button": {
       "back-to-start": "Go back home"
     }
+  },
+  "components": {
+    "title": "Components Demo",
+    "icon": {
+      "title": "Icon Component",
+      "available": "Available Icons",
+      "sizes": "Sizes"
+    },
+    "button": {
+      "title": "Button Component",
+      "variants": "Variants",
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "outline": "Outline",
+      "ghost": "Ghost",
+      "danger": "Danger",
+      "sizes": "Sizes",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "states": "States",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "full-width": "Full Width",
+      "full-width-button": "Full Width Button"
+    },
+    "toast": {
+      "title": "Toast Notifications",
+      "success": "Success Toast",
+      "error": "Error Toast",
+      "warning": "Warning Toast",
+      "info": "Info Toast"
+    },
+    "modal": {
+      "title": "Modal Dialog",
+      "open-confirmation": "Open Confirmation Modal",
+      "open-info": "Open Info Modal",
+      "open-delete": "Open Delete Modal",
+      "last-result": "Last modal result:",
+      "confirm-title": "Confirm Action",
+      "confirm-message": "Are you sure you want to proceed with this action?",
+      "confirm-yes": "Yes, proceed",
+      "confirm-cancel": "Cancel",
+      "info-title": "Information",
+      "info-message": "This is an informational modal dialog.",
+      "info-ok": "Got it",
+      "delete-title": "Delete Item",
+      "delete-message": "Are you sure you want to delete this item? This action cannot be undone.",
+      "delete-confirm": "Delete",
+      "delete-cancel": "Keep it",
+      "result-confirmed": "Confirmed ✓",
+      "result-cancelled": "Cancelled ✗",
+      "result-acknowledged": "Acknowledged ✓",
+      "result-deleted": "Deleted ✓",
+      "toast-result": "Modal result:",
+      "toast-deleted": "Item deleted successfully",
+      "toast-cancelled": "Deletion cancelled"
+    },
+    "usage": {
+      "title": "Usage Example"
+    },
+    "messages": {
+      "success": "Operation completed successfully!",
+      "error": "Something went wrong!",
+      "warning": "Please be careful!",
+      "info": "This is an informational message."
+    }
+  },
+  "login": {
+    "title": "Sign in to your account",
+    "subtitle": "Welcome back! Please enter your credentials.",
+    "email": "Email address",
+    "password": "Password",
+    "submit": "Sign in",
+    "submitting": "Signing in...",
+    "demoInfo": "Demo Credentials",
+    "demoEmail": "Email: demo@example.com",
+    "demoPassword": "Password: any password (6+ chars)",
+    "email.required": "Email is required",
+    "email.invalid": "Please enter a valid email address",
+    "password.required": "Password is required",
+    "password.minLength": "Password must be at least 6 characters"
+  },
+  "api": {
+    "title": "API Demo",
+    "subtitle": "Demonstrating HTTP Client, Interceptors, Loading States & Error Handling",
+    "actions": "Actions",
+    "loadUsers": "Load Users",
+    "loadPosts": "Load Posts",
+    "createPost": "Create Post",
+    "testLoading": "Test Loading",
+    "triggerError": "Trigger Error",
+    "users": "Users",
+    "posts": "Posts",
+    "name": "Name",
+    "email": "Email",
+    "viewPosts": "View Posts",
+    "delete": "Delete",
+    "noUsers": "No users loaded. Click 'Load Users' to fetch data.",
+    "noPosts": "No posts loaded. Click 'Load Posts' to fetch data.",
+    "postId": "Post ID",
+    "userId": "User ID",
+    "infoTitle": "What's Demonstrated Here",
+    "info1": "HTTP Client with GET, POST, DELETE operations",
+    "info2": "Loading Interceptor - automatic loading spinner",
+    "info3": "Error Interceptor - automatic error handling with toast notifications",
+    "info4": "Auth Interceptor - automatic JWT token injection (if logged in)"
+  },
+  "table": {
+    "noData": "No data available",
+    "showing": "Showing",
+    "to": "to",
+    "of": "of",
+    "perPage": "per page"
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "subtitle": "Welcome to the lazy-loaded admin area",
+      "totalUsers": "Total Users",
+      "activeUsers": "Active Users",
+      "avgResponseTime": "Avg Response Time",
+      "errors": "Errors",
+      "lazyLoadedInfo": "This entire admin section is lazy-loaded! Check the browser network tab to see it was loaded on-demand."
+    },
+    "users": {
+      "title": "User Management",
+      "subtitle": "Manage all users in the system",
+      "name": "Name",
+      "email": "Email",
+      "website": "Website",
+      "noUsers": "No users found",
+      "lazyLoadedInfo": "This page demonstrates lazy loading with route-based code splitting."
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Configure your application",
+      "generalSettings": "General Settings",
+      "content": "Settings content goes here..."
+    }
+  },
+  "virtualScroll": {
+    "title": "Virtual Scrolling",
+    "description": "Efficiently render large lists (10,000+ items) with CDK Virtual Scroll. Only visible items are rendered in the DOM."
+  },
+  "dragDrop": {
+    "title": "Drag & Drop",
+    "description": "Drag tasks between columns to manage your workflow. Built with Angular CDK Drag & Drop."
   }
 }

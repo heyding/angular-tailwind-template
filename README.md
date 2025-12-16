@@ -1,49 +1,324 @@
 # Angular + Tailwind Template
 
-Modern Angular 19 template with Tailwind CSS and Standalone Components.
+🚀 **Enterprise-ready Angular 19 template** with Tailwind CSS, 25+ features, and complete dark mode support.
 
-## Features
+[![Angular](https://img.shields.io/badge/Angular-19.2-red?logo=angular)](https://angular.io)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
+[![NgRx](https://img.shields.io/badge/NgRx-19.0-purple)](https://ngrx.io)
 
-- **Angular 19** - Standalone Components, functional routing
-- **Tailwind CSS 3.4** - Utility-first CSS framework
-- **NgRx 19** - State management
-- **i18n** - Multi-language support with ngx-translate
-- **TypeScript 5.6** - Strict mode enabled
+## ✨ Features
 
-## Getting Started
+### 🎨 **UI Components**
+- **Button Component** - Multiple variants (primary, secondary, danger, success, outline), sizes, and states
+- **Modal Component** - Confirmation, info, and delete modals with service integration
+- **Toast Notifications** - Success, error, warning, and info toasts with animations
+- **Icon Component** - 13+ Heroicons with customizable sizes and colors
+- **Table Component** - Sortable, paginated, filterable with sticky headers
+- **Loading Spinner** - Elegant spinner with fade-in animations
+- **Skeleton Loader** - Content placeholders for loading states
+- **Theme Toggle** - Sun/Moon icon with smooth transitions
+
+### 🔧 **Directives & Pipes**
+- **HighlightDirective** - Hover effects with customizable colors
+- **TooltipDirective** - Smart positioning with viewport boundary detection
+- **ClickOutsideDirective** - Detect clicks outside elements
+- **HighlightPipe** - Text highlighting with search terms
+- **TimeAgoPipe** - Relative time display (e.g., "2 hours ago")
+- **TruncatePipe** - Text truncation with ellipsis
+- **FormatNumberPipe** - Number formatting with localization
+
+### 🌙 **Dark Mode**
+- **Signal-based Theme Service** - Reactive theme state management
+- **Persistent Theme** - localStorage integration
+- **Full Coverage** - All components support dark mode
+- **Smooth Transitions** - Animated theme switching
+
+### 🏗️ **Architecture & Infrastructure**
+- **Enterprise Structure** - Features, core, shared, store, layouts, models, constants, utils
+- **Authentication** - JWT-based auth with guards and interceptors
+- **API Service** - Centralized HTTP client with error handling
+- **State Management** - NgRx store with effects and selectors
+- **Error Handling** - Global error handler with logging service
+- **Loading State** - Automatic loading indicators with interceptor
+- **Feature Flags** - Runtime feature toggles for A/B testing
+- **Breadcrumb Service** - Dynamic breadcrumb navigation
+- **Retry Logic** - Automatic HTTP retry with exponential backoff
+
+### 🧪 **Angular CDK Integration**
+- **Virtual Scrolling** - Efficient rendering of large lists (10,000+ items)
+- **Drag & Drop** - Sortable lists with visual feedback
+
+### 🌐 **Internationalization**
+- **Multi-language Support** - English and German translations
+- **500+ Translation Keys** - Comprehensive i18n coverage
+- **Language Switcher** - Runtime language switching
+
+### 📱 **Demo Pages**
+- **Home** - Hero section with gradient and feature cards
+- **Components Demo** - Interactive showcase of all components
+- **Features Demo** - Table with pipes, directives, and filtering
+- **API Demo** - CRUD operations with error handling
+- **Virtual Scroll Demo** - Performance demo with 10,000 items
+- **Drag & Drop Demo** - Interactive list sorting
+- **Login** - Authentication demo page
+- **Admin Module** - Lazy-loaded admin dashboard (users, settings)
+- **404 Page** - Stylish error page
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js**: 20.19.4 (see `.nvmrc`)
+- **npm**: 10.x or higher
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/heyding/angular-tailwind-template.git
+
+# Navigate to project
+cd angular-tailwind-template
+
 # Install dependencies
 npm install
 
-# Start dev server (http://localhost:4200)
+# Copy environment file
+cp .env.example .env
+
+# Start dev server
+npm start
+```
+
+Visit `http://localhost:4200` 🎉
+
+## 📦 Available Scripts
+
+```bash
+# Development server (http://localhost:4200)
 npm start
 
-# Build for production
+# Production build
 npm run build
 
 # Run tests
 npm test
 
-# Format code
+# Code formatting
 npm run format
+
+# Linting
+npm run lint
 ```
 
-## Project Structure
+## 🏗️ Project Structure
 
-- `/src/app/core` - Header, Footer components
-- `/src/app/home` - Home page with NgRx state
-- `/src/assets/i18n` - Translation files (en.json, de.json)
+```
+src/app/
+├── core/                    # Singleton services, guards, interceptors
+│   ├── guards/             # AuthGuard
+│   ├── interceptors/       # Auth, Error, Loading, Retry
+│   ├── services/           # API, Auth, Theme
+│   ├── handlers/           # Global error handler
+│   ├── models/             # Core interfaces
+│   ├── header/             # Header component
+│   └── footer/             # Footer component
+├── features/               # Feature modules
+│   ├── home/              # Home feature (pages, components, store)
+│   └── admin/             # Admin feature (lazy-loaded)
+├── shared/                 # Reusable components, directives, pipes
+│   ├── components/        # Button, Modal, Toast, Table, Icon, etc.
+│   ├── directives/        # Highlight, Tooltip, ClickOutside
+│   ├── pipes/             # TimeAgo, Truncate, FormatNumber, Highlight
+│   ├── services/          # Modal, Toast, Loading, Logger, FeatureFlags
+│   └── models/            # Shared interfaces
+├── store/                  # NgRx global state
+├── layouts/                # Layout components (future)
+├── models/                 # Global interfaces
+├── constants/              # App constants
+└── utils/                  # Helper functions
+```
 
-## Customization
+## 🎨 Component Usage
 
-- **Tailwind**: Edit `tailwind.config.ts` for theme customization
-- **Translations**: Add language files in `src/assets/i18n/`
-- **State**: Extend NgRx store in `src/app/home/store/`
+### Button Component
 
-## Resources
+```typescript
+import { ButtonComponent } from '@shared/components/button/button.component';
+
+// In template
+<app-button [variant]="'primary'" [size]="'md'" (clicked)="handleClick()">
+  Click Me
+</app-button>
+```
+
+### Toast Notifications
+
+```typescript
+import { ToastService } from '@shared/services/toast.service';
+
+constructor(private toastService: ToastService) {}
+
+showSuccess() {
+  this.toastService.success('Operation completed!');
+}
+```
+
+### Modal Service
+
+```typescript
+import { ModalService } from '@shared/services/modal.service';
+
+constructor(private modalService: ModalService) {}
+
+async confirmDelete() {
+  const result = await this.modalService.confirm({
+    title: 'Delete Item',
+    message: 'Are you sure?'
+  });
+  
+  if (result) {
+    // User confirmed
+  }
+}
+```
+
+### Dark Mode
+
+```typescript
+import { ThemeService } from '@core/services/theme.service';
+
+constructor(private themeService: ThemeService) {}
+
+toggleTheme() {
+  this.themeService.toggleTheme();
+}
+
+getCurrentTheme() {
+  return this.themeService.theme(); // Signal
+}
+```
+
+## 🎯 Demo Pages
+
+Navigate to these routes to see features in action:
+
+- `/` - Home page with hero section
+- `/components` - All components showcase
+- `/features` - Features demo with table
+- `/api` - API integration demo
+- `/login` - Authentication demo
+- `/virtual-scroll` - Virtual scrolling demo
+- `/drag-drop` - Drag & drop demo
+- `/admin` - Admin dashboard (lazy-loaded)
+
+## ⚙️ Configuration
+
+### Tailwind CSS
+
+Customize theme in `tailwind.config.ts`:
+
+```typescript
+module.exports = {
+  darkMode: 'class', // Enable dark mode
+  theme: {
+    extend: {
+      colors: {
+        // Add custom colors
+      }
+    }
+  }
+}
+```
+
+### Environment Variables
+
+See `.env.example` for available configuration options:
+
+```bash
+API_BASE_URL=http://localhost:3000
+FEATURE_FLAG_DARK_MODE=true
+LOG_LEVEL=debug
+```
+
+### Translations
+
+Add new languages in `src/assets/i18n/`:
+
+- `en.json` - English translations
+- `de.json` - German translations
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Generate coverage report
+npm run test:coverage
+```
+
+## 📝 Best Practices
+
+- ✅ **Standalone Components** - All components use standalone API
+- ✅ **Signals** - Reactive state with Angular Signals
+- ✅ **Functional Guards** - Modern functional guard syntax
+- ✅ **Strict TypeScript** - Type safety enabled
+- ✅ **Mobile-First** - Responsive design approach
+- ✅ **Accessibility** - ARIA labels and keyboard navigation
+- ✅ **Performance** - Lazy loading, OnPush change detection
+- ✅ **Code Style** - Prettier + ESLint
+
+## 🚀 Deployment
+
+### Production Build
+
+```bash
+npm run build
+```
+
+Output in `dist/angular-tailwind-template/`
+
+### Docker Support (Coming Soon)
+
+```dockerfile
+# Future: Dockerfile for containerized deployment
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 🔗 Resources
 
 - [Angular Documentation](https://angular.io)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Tailwind UI Components](https://tailwindui.com)
 - [NgRx Documentation](https://ngrx.io)
+- [Heroicons](https://heroicons.com)
+- [Angular CDK](https://material.angular.io/cdk)
+- [ngx-translate](https://github.com/ngx-translate/core)
+
+## 🙏 Acknowledgments
+
+- **Angular Team** - Amazing framework
+- **Tailwind Labs** - Beautiful utility-first CSS
+- **NgRx Team** - Powerful state management
+- **Heroicons** - Gorgeous SVG icons
+
+---
+
+Made with ❤️ by [Tommy Heyding](https://github.com/heyding)
