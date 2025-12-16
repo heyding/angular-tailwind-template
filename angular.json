@@ -24,6 +24,9 @@
               "src/polyfills.ts"
             ],
             "tsConfig": "tsconfig.app.json",
+            "allowedCommonJsDependencies": [
+              "deepmerge"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

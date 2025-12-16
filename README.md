@@ -1,9 +1,10 @@
 # Angular + Tailwind Template
 
 You can fork this template if you need a basic setup for an Angular project and want to use Tailwind CSS for the UI.
-Tailwind was integrated according to this [guide](https://jacobneterer.medium.com/angular-and-tailwindcss-2388fb6e0bab).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+**Updated to Angular 19 and Tailwind CSS 3.4** with native Tailwind support (no custom webpack required).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and updated to version 19.2.
 
 ## Development server
 
