@@ -5,7 +5,7 @@ export default {
   darkMode: 'class', // Enable class-based dark mode
   theme: {
     fontFamily: {
-      sans: ['Heebo', 'sans-serif']
+      sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
     },
     extend: {},
   },

@@ -19,25 +19,25 @@
   },
   "footer": {
     "text": {
-      "long-notice": "Große Neuigkeiten! Wir haben ein neues Produkt!",
-      "short-notice": "Wir haben ein neues Produkt!"
+      "long-notice": "🚀 Jetzt live! Schau dir unser modernes Angular Template mit vollständigem Deployment auf Digital Ocean an.",
+      "short-notice": "🚀 Live Demo verfügbar!"
     },
     "button": {
-      "learn-more": "Mehr erfahren"
+      "learn-more": "Auf GitHub ansehen"
     }
   },
   "home": {
-    "headline": "Angular + Tailwind Template",
-    "text": "Wenn die Seite wie der Screenshot in \"src/assets/img\" aussieht, ist Tailwind korrekt eingerichtet und du kannst beginnen.",
+    "headline": "Modernes Angular Template",
+    "text": "Enterprise-fähiges Angular 19 Starter-Template mit Tailwind CSS, NgRx State Management, Authentifizierung und über 25 produktionsreifen Komponenten. Gebaut für Skalierbarkeit.",
     "ngrx": {
-      "title": "NGRX Test",
-      "description": "Wir haben NGRX Funktionalität schon implementiert. Schreibe etwas in die Textarea, drück den Button und aktualisiere den Browser Tab um das zu verifizieren.",
+      "title": "NgRx State Management",
+      "description": "Erlebe reaktives State Management mit NgRx Store. Gib etwas ein, speichere es im Store und sieh zu, wie es dank localStorage-Integration auch nach Seitenaktualisierungen erhalten bleibt.",
       "button": {
-        "store": "Input speichern",
-        "reset": "Store zurücksetzen"
+        "store": "Im Store speichern",
+        "reset": "Store leeren"
       },
-      "store": "Gespeicherter Wert: ",
-      "message": "Deine Eingabe war: "
+      "store": "Aktueller Wert: ",
+      "message": "Erfolgreich gespeichert: "
     }
   },
   "features": {
