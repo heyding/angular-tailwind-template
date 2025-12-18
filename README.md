@@ -101,7 +101,7 @@ npm start
 
 Visit `http://localhost:4200` 🎉
 
-## � Docker Deployment
+## 🐳 Docker Deployment
 
 ### Local Docker Testing
 
@@ -139,7 +139,7 @@ doctl auth init
 doctl apps create --spec .do/app.yaml
 ```
 
-## �📦 Available Scripts
+## 📦 Available Scripts
 
 ```bash
 # Development server (http://localhost:4200)
