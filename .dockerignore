@@ -1,11 +1,30 @@
-# Docker files
-Dockerfile
-docker-compose.yml
-.dockerignore
+# Node modules and dependencies
+node_modules
+npm-debug.log
 
-# CI/CD
-.github/
+# Distribution and build output
+dist
+.angular
 
-# Digital Ocean
-.do/
-nginx.conf
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage
+
+# Git
+.git
+.gitignore
