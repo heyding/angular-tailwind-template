@@ -6,6 +6,14 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
 [![NgRx](https://img.shields.io/badge/NgRx-19.0-purple)](https://ngrx.io)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)](https://www.docker.com/)
+[![Digital Ocean](https://img.shields.io/badge/Deploy-Digital%20Ocean-0080FF?logo=digitalocean)](https://www.digitalocean.com/)
+
+## 🌐 Live Demo
+
+**🔗 [View Live Demo](https://angular-tailwind-template.ondigitalocean.app)** *(Coming soon)*
+
+> **Note**: After deploying to Digital Ocean, update the URL above with your actual deployment link.
 
 ## ✨ Features
 
@@ -93,7 +101,45 @@ npm start
 
 Visit `http://localhost:4200` 🎉
 
-## 📦 Available Scripts
+## � Docker Deployment
+
+### Local Docker Testing
+
+```bash
+# Build Docker image
+docker build -t angular-tailwind-template .
+
+# Run container
+docker run -p 8080:80 angular-tailwind-template
+
+# Or use docker-compose
+docker-compose up
+```
+
+Visit `http://localhost:8080` to test the production build.
+
+### Deploy to Digital Ocean
+
+See the complete [Deployment Guide](./DEPLOYMENT.md) for:
+- 🚀 One-click deployment to Digital Ocean App Platform
+- 🔄 GitHub Actions CI/CD pipeline
+- 🌐 Custom domain setup
+- 📊 Monitoring and scaling
+
+**Quick Deploy:**
+```bash
+# Install doctl CLI
+brew install doctl  # macOS
+# or download from https://docs.digitalocean.com/reference/doctl/
+
+# Authenticate
+doctl auth init
+
+# Deploy
+doctl apps create --spec .do/app.yaml
+```
+
+## �📦 Available Scripts
 
 ```bash
 # Development server (http://localhost:4200)
@@ -311,6 +357,8 @@ This project is open source and available under the MIT License.
 - [Heroicons](https://heroicons.com)
 - [Angular CDK](https://material.angular.io/cdk)
 - [ngx-translate](https://github.com/ngx-translate/core)
+- [Digital Ocean App Platform](https://www.digitalocean.com/products/app-platform)
+- [Deployment Guide](./DEPLOYMENT.md)
 
 ## 🙏 Acknowledgments
 

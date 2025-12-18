@@ -1,0 +1,11 @@
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# CI/CD
+.github/
+
+# Digital Ocean
+.do/
+nginx.conf
