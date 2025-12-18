@@ -11,9 +11,9 @@
 
 ## 🌐 Live Demo
 
-**🔗 [View Live Demo](https://angular-tailwind-template.ondigitalocean.app)** *(Coming soon)*
+**🔗 [View Live Demo](https://angular-tailwind-demo-dl6yx.ondigitalocean.app/home)** 
 
-> **Note**: After deploying to Digital Ocean, update the URL above with your actual deployment link.
+Experience all features live: Dark mode, components, authentication, state management, and more!
 
 ## ✨ Features
 
