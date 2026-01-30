@@ -21,7 +21,9 @@ Dieser Leitfaden hilft dir, das Angular Tailwind Template an deine Bedürfnisse 
 ```bash
 git clone https://github.com/yourusername/angular-tailwind-template.git my-project
 cd my-project
-npm install --legacy-peer-deps
+
+# Install dependencies (automatically uses legacy-peer-deps from .npmrc)
+npm install
 ```
 
 ### 2. Git History zurücksetzen (optional)

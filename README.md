@@ -23,6 +23,7 @@ Experience all features live: Dark mode, components, authentication, state manag
 
 - **[Customization Guide](docs/CUSTOMIZATION.md)** - Vollständige Anleitung zum Anpassen des Templates
 - **[Deployment Guide](docs/DEPLOYMENT.md)** - Schritt-für-Schritt Deployment-Anleitung
+- **[Pre-commit Hooks](docs/PRE-COMMIT-HOOKS.md)** - Automatische Code-Qualitätsprüfung
 
 ## ✨ Features
 
@@ -119,6 +120,7 @@ git clone https://github.com/heyding/angular-tailwind-template.git
 cd angular-tailwind-template
 
 # Install dependencies
+# Note: .npmrc is configured with legacy-peer-deps=true to handle Angular version conflicts
 npm install
 
 # Copy environment file
@@ -129,6 +131,8 @@ npm start
 ```
 
 Visit `http://localhost:4200` 🎉
+
+**Note:** The project includes a `.npmrc` file that automatically handles peer dependency conflicts. No need to use `--legacy-peer-deps` flag manually.
 
 ## 🐳 Docker Deployment
 
