@@ -27,7 +27,7 @@ Experience all features live: Dark mode, components, authentication, state manag
 
 ## ✨ Features
 
-### �🇪 **D-Stack & DSGVO Compliance**
+### 🇩🇪 **D-Stack & DSGVO Compliance**
 
 - **Datenschutzseite** - Vollständige DSGVO-konforme Datenschutzerklärung
 - **Impressum** - Rechtssichere Impressumsseite nach deutschem Recht
@@ -37,7 +37,7 @@ Experience all features live: Dark mode, components, authentication, state manag
 - **Deutsche Sprache** - Vollständige deutsche Übersetzungen als Standard
 - **LocalStorage only** - Keine externe Datenübertragung, Privacy by Design
 
-### �🎨 **UI Components** (Ready to Use)
+### 🎨 **UI Components** (Ready to Use)
 
 Alle UI-Komponenten sind bereits in `app.component.ts` importiert und projekt-weit verfügbar:
 
