@@ -2,6 +2,8 @@
 
 🚀 **Enterprise-ready Angular 19 template** with Tailwind CSS, 25+ features, and complete dark mode support.
 
+**🇩🇪 D-Stack Kompatibel** - Dieses Template nutzt Angular und TypeScript, die beide als "D-Stack GRADUATED" Technologien im [deutschland-stack](https://technologie.deutschland-stack.gov.de/) zertifiziert sind und damit den Standards für moderne, sichere und interoperable Webentwicklung in der öffentlichen Verwaltung entsprechen.
+
 [![Angular](https://img.shields.io/badge/Angular-19.2-red?logo=angular)](https://angular.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
@@ -11,7 +13,7 @@
 
 ## 🌐 Live Demo
 
-**🔗 [View Live Demo](https://angular-tailwind-demo-dl6yx.ondigitalocean.app/home)** 
+**🔗 [View Live Demo](https://angular-tailwind-demo-dl6yx.ondigitalocean.app/home)**
 
 Experience all features live: Dark mode, components, authentication, state management, and more!
 
@@ -223,7 +225,7 @@ async confirmDelete() {
     title: 'Delete Item',
     message: 'Are you sure?'
   });
-  
+
   if (result) {
     // User confirmed
   }
