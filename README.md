@@ -19,11 +19,32 @@
 
 Experience all features live: Dark mode, components, authentication, state management, and more!
 
-## 📚 Documentation
+## � Quick Start
+
+**Bereit zum Forken?** Siehe [QUICKSTART.md](QUICKSTART.md) für die 5-Minuten Anleitung!
+
+```bash
+# 1. Fork das Repo auf GitHub
+# 2. Clone dein Fork
+git clone https://github.com/YOUR-USERNAME/angular-tailwind-template.git
+
+# 3. Dependencies installieren
+npm install
+
+# 4. Development Server starten
+npm start
+# → http://localhost:4200
+```
+
+**Hinweis**: `.npmrc` ist bereits konfiguriert - keine zusätzlichen Flags nötig!
+
+## �📚 Documentation
 
 - **[Customization Guide](docs/CUSTOMIZATION.md)** - Vollständige Anleitung zum Anpassen des Templates
 - **[Deployment Guide](docs/DEPLOYMENT.md)** - Schritt-für-Schritt Deployment-Anleitung
 - **[Pre-commit Hooks](docs/PRE-COMMIT-HOOKS.md)** - Automatische Code-Qualitätsprüfung
+- **[Quickstart Guide](QUICKSTART.md)** - 5-Minuten Setup für geforktes Projekt
+- **[Contributing Guide](CONTRIBUTING.md)** - Wie du zum Template beitragen kannst
 
 ## ✨ Features
 
@@ -362,27 +383,31 @@ npm run build
 
 Output in `dist/angular-tailwind-template/`
 
-### Docker Support (Coming Soon)
-
-```dockerfile
-# Future: Dockerfile for containerized deployment
-```
-
 ## 🤝 Contributing
 
-Contributions are welcome! Please:
+Beiträge sind willkommen! Bitte lies [CONTRIBUTING.md](CONTRIBUTING.md) für Details.
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+**Schnellanleitung**:
+1. Fork das Repository
+2. Erstelle einen Feature-Branch (`git checkout -b feature/amazing-feature`)
+3. Committe deine Änderungen (`git commit -m 'feat: add amazing feature'`)
+4. Push zum Branch (`git push origin feature/amazing-feature`)
+5. Öffne einen Pull Request
+
+Siehe auch: [Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md)
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+Dieses Projekt ist Open Source und verfügbar unter der [MIT License](LICENSE).
 
-## 🔗 Resources
+## 🌟 Support & Community
+
+- 🐛 **Bugs**: [Issue erstellen](https://github.com/heyding/angular-tailwind-template/issues/new?template=bug_report.md)
+- 💡 **Feature Requests**: [Feature vorschlagen](https://github.com/heyding/angular-tailwind-template/issues/new?template=feature_request.md)
+- 💬 **Diskussionen**: [GitHub Discussions](https://github.com/heyding/angular-tailwind-template/discussions)
+- ⭐ **Star das Repo**, wenn es dir hilft!
+
+## 📖 Weitere Ressourcen
 
 - [Angular Documentation](https://angular.io)
 - [Tailwind CSS](https://tailwindcss.com)
