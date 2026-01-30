@@ -19,6 +19,11 @@
 
 Experience all features live: Dark mode, components, authentication, state management, and more!
 
+## 📚 Documentation
+
+- **[Customization Guide](docs/CUSTOMIZATION.md)** - Vollständige Anleitung zum Anpassen des Templates
+- **[Deployment Guide](docs/DEPLOYMENT.md)** - Schritt-für-Schritt Deployment-Anleitung
+
 ## ✨ Features
 
 ### �🇪 **D-Stack & DSGVO Compliance**

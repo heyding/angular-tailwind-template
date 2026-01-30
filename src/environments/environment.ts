@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  // TODO: Configure your API base URL for development
   apiUrl: 'https://jsonplaceholder.typicode.com',
 };
 
