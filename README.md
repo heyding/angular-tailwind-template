@@ -19,7 +19,7 @@
 
 Experience all features live: Dark mode, components, authentication, state management, and more!
 
-## � Quick Start
+## 🚀 Quick Start
 
 **Bereit zum Forken?** Siehe [QUICKSTART.md](QUICKSTART.md) für die 5-Minuten Anleitung!
 
@@ -38,7 +38,7 @@ npm start
 
 **Hinweis**: `.npmrc` ist bereits konfiguriert - keine zusätzlichen Flags nötig!
 
-## �📚 Documentation
+## 📚 Documentation
 
 - **[Customization Guide](docs/CUSTOMIZATION.md)** - Vollständige Anleitung zum Anpassen des Templates
 - **[Deployment Guide](docs/DEPLOYMENT.md)** - Schritt-für-Schritt Deployment-Anleitung
