@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
 import { FooterComponent } from './core/footer/footer.component';
 import { HeaderComponent } from './core/header/header.component';
 import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
@@ -24,11 +23,10 @@ import { ThemeService } from './shared/services/theme.service';
 })
 export class AppComponent {
   title = 'angular-tailwind-template';
-  private readonly translate = inject(TranslateService);
   private readonly themeService = inject(ThemeService); // Initialize theme service
 
   constructor() {
-    this.translate.setDefaultLang('de');
+    // Translation is now initialized via APP_INITIALIZER in app.config.ts
     // Theme service is automatically initialized via effect()
   }
 }

@@ -320,5 +320,24 @@
   "dragDrop": {
     "title": "Drag & Drop",
     "description": "Drag tasks between columns to manage your workflow. Built with Angular CDK Drag & Drop."
+  },
+  "errors": {
+    "unexpected": "An unexpected error occurred",
+    "clientError": "Error: {{message}}",
+    "badRequest": "Bad Request: Please check your input",
+    "unauthorized": "Unauthorized: Please login",
+    "forbidden": "Forbidden: You do not have permission",
+    "notFound": "Not Found: Resource does not exist",
+    "serverError": "Server Error: Please try again later",
+    "default": "Error {{status}}: {{message}}"
+  },
+  "toasts": {
+    "success": "Success!",
+    "error": "Error!",
+    "warning": "Warning!",
+    "info": "Info!"
+  },
+  "loading": {
+    "text": "Loading..."
   }
 }

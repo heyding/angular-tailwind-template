@@ -31,7 +31,7 @@
     "text": "Enterprise-fähiges Angular 19 Starter-Template mit Tailwind CSS, NgRx State Management, Authentifizierung und über 25 produktionsreifen Komponenten. Gebaut für Skalierbarkeit.",
     "ngrx": {
       "title": "NgRx State Management",
-      "description": "Erlebe reaktives State Management mit NgRx Store. Gib etwas ein, speichere es im Store und sieh zu, wie es dank localStorage-Integration auch nach Seitenaktualisierungen erhalten bleibt.",
+      "description": "Erlebe reaktives State Management mit NgRx Store. Gib etwas ein, speichere es im Store und sieh, wie es dank localStorage-Integration auch nach Seitenaktualisierungen erhalten bleibt.",
       "button": {
         "store": "Im Store speichern",
         "reset": "Store leeren"
@@ -320,5 +320,24 @@
   "dragDrop": {
     "title": "Drag & Drop",
     "description": "Ziehen Sie Aufgaben zwischen Spalten, um Ihren Workflow zu verwalten. Erstellt mit Angular CDK Drag & Drop."
+  },
+  "errors": {
+    "unexpected": "Ein unerwarteter Fehler ist aufgetreten",
+    "clientError": "Fehler: {{message}}",
+    "badRequest": "Fehlerhafte Anfrage: Bitte überprüfen Sie Ihre Eingabe",
+    "unauthorized": "Nicht autorisiert: Bitte melden Sie sich an",
+    "forbidden": "Verboten: Sie haben keine Berechtigung",
+    "notFound": "Nicht gefunden: Ressource existiert nicht",
+    "serverError": "Serverfehler: Bitte versuchen Sie es später erneut",
+    "default": "Fehler {{status}}: {{message}}"
+  },
+  "toasts": {
+    "success": "Erfolg!",
+    "error": "Fehler!",
+    "warning": "Warnung!",
+    "info": "Info!"
+  },
+  "loading": {
+    "text": "Lädt..."
   }
 }

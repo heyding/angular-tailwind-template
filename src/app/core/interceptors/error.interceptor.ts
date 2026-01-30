@@ -1,38 +1,40 @@
-import { HttpInterceptorFn, HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { catchError, throwError } from 'rxjs';
 import { ToastService } from '../../shared/services/toast.service';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
   const toastService = inject(ToastService);
+  const translate = inject(TranslateService);
 
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
-      let errorMessage = 'An unexpected error occurred';
+      let errorMessage = translate.instant('errors.unexpected');
 
       if (error.error instanceof ErrorEvent) {
         // Client-side error
-        errorMessage = `Error: ${error.error.message}`;
+        errorMessage = translate.instant('errors.clientError', { message: error.error.message });
       } else {
         // Server-side error
         switch (error.status) {
           case 400:
-            errorMessage = 'Bad Request: Please check your input';
+            errorMessage = translate.instant('errors.badRequest');
             break;
           case 401:
-            errorMessage = 'Unauthorized: Please login';
+            errorMessage = translate.instant('errors.unauthorized');
             break;
           case 403:
-            errorMessage = 'Forbidden: You do not have permission';
+            errorMessage = translate.instant('errors.forbidden');
             break;
           case 404:
-            errorMessage = 'Not Found: Resource does not exist';
+            errorMessage = translate.instant('errors.notFound');
             break;
           case 500:
-            errorMessage = 'Server Error: Please try again later';
+            errorMessage = translate.instant('errors.serverError');
             break;
           default:
-            errorMessage = `Error ${error.status}: ${error.message}`;
+            errorMessage = translate.instant('errors.default', { status: error.status, message: error.message });
         }
       }
 
