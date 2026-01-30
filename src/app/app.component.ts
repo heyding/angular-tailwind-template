@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
-import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { ToastContainerComponent } from './shared/components/toast-container/toast-container.component';
-import { ModalComponent } from './shared/components/modal/modal.component';
+import { HeaderComponent } from './core/header/header.component';
+import { CookieBannerComponent } from './shared/components/cookie-banner/cookie-banner.component';
 import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
+import { ModalComponent } from './shared/components/modal/modal.component';
+import { ToastContainerComponent } from './shared/components/toast-container/toast-container.component';
 import { ThemeService } from './shared/services/theme.service';
 
 @Component({
@@ -20,15 +20,15 @@ import { ThemeService } from './shared/services/theme.service';
     ToastContainerComponent,
     ModalComponent,
     LoadingSpinnerComponent,
+    CookieBannerComponent,
   ],
 })
 export class AppComponent {
   title = 'angular-tailwind-template';
-  private readonly translate = inject(TranslateService);
   private readonly themeService = inject(ThemeService); // Initialize theme service
 
   constructor() {
-    this.translate.setDefaultLang('en');
+    // Translation is now initialized via APP_INITIALIZER in app.config.ts
     // Theme service is automatically initialized via effect()
   }
 }

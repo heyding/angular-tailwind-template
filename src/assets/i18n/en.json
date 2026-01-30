@@ -320,5 +320,106 @@
   "dragDrop": {
     "title": "Drag & Drop",
     "description": "Drag tasks between columns to manage your workflow. Built with Angular CDK Drag & Drop."
+  },
+  "errors": {
+    "unexpected": "An unexpected error occurred",
+    "clientError": "Error: {{message}}",
+    "badRequest": "Bad Request: Please check your input",
+    "unauthorized": "Unauthorized: Please login",
+    "forbidden": "Forbidden: You do not have permission",
+    "notFound": "Not Found: Resource does not exist",
+    "serverError": "Server Error: Please try again later",
+    "default": "Error {{status}}: {{message}}"
+  },
+  "toasts": {
+    "success": "Success!",
+    "error": "Error!",
+    "warning": "Warning!",
+    "info": "Info!"
+  },
+  "loading": {
+    "text": "Loading..."
+  },
+  "cookies": {
+    "banner": {
+      "message": "We only use technically necessary cookies for theme settings and language selection. No tracking cookies.",
+      "details": "More information in our",
+      "privacyLink": "Privacy Policy",
+      "accept": "Accept",
+      "reject": "Necessary only"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "date": "January 30, 2026",
+    "responsible": {
+      "title": "1. Data Controller",
+      "content": "Responsible for data processing on this website: [Your Name/Organization]"
+    },
+    "dataProcessing": {
+      "title": "2. Data Processing",
+      "content": "This template application processes data exclusively locally in the browser. No personal data is transmitted to external servers.",
+      "localStorage": {
+        "title": "LocalStorage",
+        "content": "We use your browser's LocalStorage to save theme settings and language preferences. This data remains exclusively on your device."
+      }
+    },
+    "cookies": {
+      "title": "3. Cookies",
+      "content": "This website does not use tracking cookies. We only use technically necessary cookies to store theme and language settings."
+    },
+    "rights": {
+      "title": "4. Your Rights",
+      "access": "Right to access your stored data",
+      "rectification": "Right to rectification of incorrect data",
+      "deletion": "Right to deletion of your data",
+      "restriction": "Right to restriction of processing",
+      "portability": "Right to data portability",
+      "objection": "Right to object to processing"
+    },
+    "dstack": {
+      "title": "D-Stack Compliance",
+      "content": "This application meets the requirements of the Germany Stack (D-Stack) and is GDPR compliant. All technologies used are certified as D-Stack GRADUATED."
+    },
+    "backToHome": "Back to Home"
+  },
+  "imprint": {
+    "title": "Legal Notice",
+    "provider": {
+      "title": "Information according to § 5 TMG",
+      "name": "[Your Name / Organization]",
+      "address": "[Street and Number]",
+      "city": "[ZIP and City]"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "responsible": {
+      "title": "Responsible for content according to § 55 Abs. 2 RStV",
+      "content": "[Name and address as above]"
+    },
+    "dispute": {
+      "title": "EU Dispute Resolution",
+      "content": "The European Commission provides a platform for online dispute resolution (ODR):"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content": {
+        "title": "Liability for Content",
+        "text": "As a service provider, we are responsible for our own content on these pages according to § 7 para.1 TMG. The content was created carefully, but we assume no liability for accuracy."
+      },
+      "links": {
+        "title": "Liability for Links",
+        "text": "Our offer contains links to external websites. We have no influence on their content and therefore assume no responsibility."
+      }
+    },
+    "dstack": {
+      "title": "D-Stack Ready Template",
+      "content": "This Angular template is fully compliant with Germany Stack (D-Stack) standards and suitable for use in government and public administration."
+    },
+    "backToHome": "Back to Home"
   }
 }

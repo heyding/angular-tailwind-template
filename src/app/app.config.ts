@@ -1,30 +1,28 @@
+import { HttpClient, provideHttpClient, withInterceptors } from '@angular/common/http';
 import {
+  APP_INITIALIZER,
   ApplicationConfig,
   ErrorHandler,
+  importProvidersFrom,
   provideZoneChangeDetection,
-  APP_INITIALIZER,
-  inject,
 } from '@angular/core';
-import { provideRouter } from '@angular/router';
-import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { provideStore } from '@ngrx/store';
+import { provideRouter } from '@angular/router';
 import { provideEffects } from '@ngrx/effects';
+import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient } from '@angular/common/http';
-import { importProvidersFrom } from '@angular/core';
 import { ThemeService } from './shared/services/theme.service';
 
-import { routes } from './app.routes';
-import { metaReducers, reducers } from './store/app.reducer';
 import { environment } from '../environments/environment';
-import { authInterceptor } from './core/interceptors/auth.interceptor';
-import { loadingInterceptor } from './core/interceptors/loading.interceptor';
-import { errorInterceptor } from './core/interceptors/error.interceptor';
-import { retryInterceptor } from './core/interceptors/retry.interceptor';
+import { routes } from './app.routes';
 import { GlobalErrorHandler } from './core/handlers/global-error.handler';
+import { authInterceptor } from './core/interceptors/auth.interceptor';
+import { errorInterceptor } from './core/interceptors/error.interceptor';
+import { loadingInterceptor } from './core/interceptors/loading.interceptor';
+import { retryInterceptor } from './core/interceptors/retry.interceptor';
+import { metaReducers, reducers } from './store/app.reducer';
 
 // Factory function for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -37,6 +35,14 @@ export function initializeTheme(themeService: ThemeService) {
     // Theme service constructor already applies the theme
     // Just trigger it by calling isDark()
     themeService.isDark();
+  };
+}
+
+// Initialize translations on app start
+export function initializeTranslations(translate: TranslateService) {
+  return () => {
+    translate.setDefaultLang('de');
+    return translate.use('de').toPromise();
   };
 }
 
@@ -65,6 +71,13 @@ export const appConfig: ApplicationConfig = {
     ),
     // Global Error Handler
     { provide: ErrorHandler, useClass: GlobalErrorHandler },
+    // Initialize translations before app starts
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeTranslations,
+      deps: [TranslateService],
+      multi: true,
+    },
     // Initialize Theme Service early
     { provide: APP_INITIALIZER, useFactory: initializeTheme, deps: [ThemeService], multi: true },
   ],

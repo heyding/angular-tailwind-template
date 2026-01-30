@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ButtonComponent } from '../../../../shared/components/button/button.component';
 import { IconComponent } from '../../../../shared/components/icon/icon.component';
-import { ToastService } from '../../../../shared/services/toast.service';
 import { ModalService } from '../../../../shared/services/modal.service';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ToastService } from '../../../../shared/services/toast.service';
 
 @Component({
   selector: 'app-components-demo',
@@ -300,15 +300,15 @@ export class ComponentsDemoComponent {
   }
 
   usageExample = `// Icon Component (Heroicons)
-<app-icon 
-  [name]="'home'" 
+<app-icon
+  [name]="'home'"
   [size]="'md'"
   [customClass]="'text-blue-600'">
 </app-icon>
 
 // Button Component
-<app-button 
-  [variant]="'primary'" 
+<app-button
+  [variant]="'primary'"
   [size]="'md'"
   (clicked)="handleClick()">
   Click me
@@ -326,10 +326,10 @@ constructor() {
 }
 
 showToast() {
-  this.toastService.success('Success!');
-  this.toastService.error('Error!');
-  this.toastService.warning('Warning!');
-  this.toastService.info('Info!');
+  this.toastService.success(this.translate.instant('toasts.success'));
+  this.toastService.error(this.translate.instant('toasts.error'));
+  this.toastService.warning(this.translate.instant('toasts.warning'));
+  this.toastService.info(this.translate.instant('toasts.info'));
 }
 
 // Modal Service
@@ -340,7 +340,7 @@ async openModal() {
     confirmText: 'Yes',
     cancelText: 'No'
   });
-  
+
   if (result.confirmed) {
     // User clicked confirm
   }
