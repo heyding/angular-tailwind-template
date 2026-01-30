@@ -1,13 +1,15 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './features/home/pages/home/home.component';
-import { AboutComponent } from './features/home/pages/about/about.component';
-import { ComponentsDemoComponent } from './features/home/pages/components-demo/components-demo.component';
 import { PageNotFoundComponent } from './features/home/components/page-not-found/page-not-found.component';
-import { LoginComponent } from './features/home/pages/login/login.component';
+import { AboutComponent } from './features/home/pages/about/about.component';
 import { ApiDemoComponent } from './features/home/pages/api-demo/api-demo.component';
-import { FeaturesDemoComponent } from './features/home/pages/features-demo/features-demo.component';
-import { VirtualScrollDemoComponent } from './features/home/pages/virtual-scroll-demo/virtual-scroll-demo.component';
+import { ComponentsDemoComponent } from './features/home/pages/components-demo/components-demo.component';
 import { DragDropDemoComponent } from './features/home/pages/drag-drop-demo/drag-drop-demo.component';
+import { FeaturesDemoComponent } from './features/home/pages/features-demo/features-demo.component';
+import { HomeComponent } from './features/home/pages/home/home.component';
+import { ImprintComponent } from './features/home/pages/imprint/imprint.component';
+import { LoginComponent } from './features/home/pages/login/login.component';
+import { PrivacyComponent } from './features/home/pages/privacy/privacy.component';
+import { VirtualScrollDemoComponent } from './features/home/pages/virtual-scroll-demo/virtual-scroll-demo.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,6 +21,8 @@ export const routes: Routes = [
   { path: 'virtual-scroll', component: VirtualScrollDemoComponent },
   { path: 'drag-drop', component: DragDropDemoComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'privacy', component: PrivacyComponent },
+  { path: 'imprint', component: ImprintComponent },
   {
     path: 'admin',
     loadChildren: () => import('./features/admin/admin.routes').then(m => m.ADMIN_ROUTES),

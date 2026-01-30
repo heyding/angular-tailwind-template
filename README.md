@@ -2,12 +2,14 @@
 
 🚀 **Enterprise-ready Angular 19 template** with Tailwind CSS, 25+ features, and complete dark mode support.
 
-**🇩🇪 D-Stack Ready** - Dieses Template ist vollständig **d-stack-ready** und nutzt Angular und TypeScript, die beide als "D-Stack GRADUATED" Technologien im [deutschland-stack](https://technologie.deutschland-stack.gov.de/) zertifiziert sind. Das Template entspricht damit den Standards für moderne, sichere und interoperable Webentwicklung und kann direkt in d-stack-Projekten eingesetzt werden.
+**🇩🇪 D-Stack Ready & DSGVO-konform** - Dieses Template ist vollständig **d-stack-ready** und nutzt Angular und TypeScript, die beide als "D-Stack GRADUATED" Technologien im [deutschland-stack](https://technologie.deutschland-stack.gov.de/) zertifiziert sind. Mit integriertem Datenschutz, Impressum, Cookie-Banner und WCAG 2.1 Accessibility entspricht es den Standards für moderne, sichere und interoperable Webentwicklung.
 
 [![Angular](https://img.shields.io/badge/Angular-19.2-red?logo=angular)](https://angular.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
 [![NgRx](https://img.shields.io/badge/NgRx-19.0-purple)](https://ngrx.io)
+[![DSGVO](https://img.shields.io/badge/DSGVO-Konform-success)](https://dsgvo-gesetz.de/)
+[![WCAG](https://img.shields.io/badge/WCAG-2.1-blue)](https://www.w3.org/WAI/WCAG21/quickref/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)](https://www.docker.com/)
 [![Digital Ocean](https://img.shields.io/badge/Deploy-Digital%20Ocean-0080FF?logo=digitalocean)](https://www.digitalocean.com/)
 
@@ -19,7 +21,17 @@ Experience all features live: Dark mode, components, authentication, state manag
 
 ## ✨ Features
 
-### 🎨 **UI Components** (Ready to Use)
+### �🇪 **D-Stack & DSGVO Compliance**
+
+- **Datenschutzseite** - Vollständige DSGVO-konforme Datenschutzerklärung
+- **Impressum** - Rechtssichere Impressumsseite nach deutschem Recht
+- **Cookie-Banner** - DSGVO-konformer Cookie-Hinweis mit Zustimmungsverwaltung
+- **Security Headers** - CSP, HSTS, X-Frame-Options, Content-Type-Options
+- **Skip Links** - WCAG 2.1 Accessibility für Tastaturnavigation
+- **Deutsche Sprache** - Vollständige deutsche Übersetzungen als Standard
+- **LocalStorage only** - Keine externe Datenübertragung, Privacy by Design
+
+### �🎨 **UI Components** (Ready to Use)
 
 Alle UI-Komponenten sind bereits in `app.component.ts` importiert und projekt-weit verfügbar:
 

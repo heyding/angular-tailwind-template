@@ -339,5 +339,87 @@
   },
   "loading": {
     "text": "Lädt..."
+  },
+  "cookies": {
+    "banner": {
+      "message": "Wir verwenden nur technisch notwendige Cookies für Theme-Einstellungen und Sprachauswahl. Keine Tracking-Cookies.",
+      "details": "Mehr Informationen in unserer",
+      "privacyLink": "Datenschutzerklärung",
+      "accept": "Akzeptieren",
+      "reject": "Nur notwendige"
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Stand",
+    "date": "30. Januar 2026",
+    "responsible": {
+      "title": "1. Verantwortlicher",
+      "content": "Verantwortlich für die Datenverarbeitung auf dieser Website ist: [Ihr Name/Ihre Organisation]"
+    },
+    "dataProcessing": {
+      "title": "2. Datenverarbeitung",
+      "content": "Diese Template-Anwendung verarbeitet Daten ausschließlich lokal im Browser. Es werden keine personenbezogenen Daten an externe Server übermittelt.",
+      "localStorage": {
+        "title": "LocalStorage",
+        "content": "Wir verwenden den LocalStorage Ihres Browsers, um Theme-Einstellungen und Sprachpräferenzen zu speichern. Diese Daten verbleiben ausschließlich auf Ihrem Gerät."
+      }
+    },
+    "cookies": {
+      "title": "3. Cookies",
+      "content": "Diese Website verwendet keine Tracking-Cookies. Wir setzen nur technisch notwendige Cookies zur Speicherung von Theme- und Spracheinstellungen ein."
+    },
+    "rights": {
+      "title": "4. Ihre Rechte",
+      "access": "Recht auf Auskunft über Ihre gespeicherten Daten",
+      "rectification": "Recht auf Berichtigung unrichtiger Daten",
+      "deletion": "Recht auf Löschung Ihrer Daten",
+      "restriction": "Recht auf Einschränkung der Verarbeitung",
+      "portability": "Recht auf Datenübertragbarkeit",
+      "objection": "Widerspruchsrecht gegen die Verarbeitung"
+    },
+    "dstack": {
+      "title": "D-Stack Konformität",
+      "content": "Diese Anwendung erfüllt die Anforderungen des Deutschland-Stacks und ist konform mit der DSGVO. Alle verwendeten Technologien sind als D-Stack GRADUATED zertifiziert."
+    },
+    "backToHome": "Zurück zur Startseite"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "provider": {
+      "title": "Angaben gemäß § 5 TMG",
+      "name": "[Ihr Name / Ihre Organisation]",
+      "address": "[Straße und Hausnummer]",
+      "city": "[PLZ und Ort]"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "E-Mail",
+      "phone": "Telefon"
+    },
+    "responsible": {
+      "title": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+      "content": "[Name und Anschrift wie oben]"
+    },
+    "dispute": {
+      "title": "EU-Streitschlichtung",
+      "content": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:"
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "content": {
+        "title": "Haftung für Inhalte",
+        "text": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Die Inhalte wurden sorgfältig erstellt, dennoch übernehmen wir keine Gewähr für die Richtigkeit."
+      },
+      "links": {
+        "title": "Haftung für Links",
+        "text": "Unser Angebot enthält Links zu externen Websites. Auf deren Inhalte haben wir keinen Einfluss und übernehmen daher keine Verantwortung."
+      }
+    },
+    "dstack": {
+      "title": "D-Stack Ready Template",
+      "content": "Dieses Angular Template ist vollständig konform mit den Standards des Deutschland-Stacks und eignet sich für den Einsatz in Behörden und öffentlicher Verwaltung."
+    },
+    "backToHome": "Zurück zur Startseite"
   }
 }
