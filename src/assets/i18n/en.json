@@ -46,7 +46,7 @@
     "feature-list": {
       "tailwind": {
         "title": "Tailwind CSS 3.0",
-        "description": "This template fully implements Tailwind CSS 3.0. You can use there templates right away within you components."
+        "description": "This template fully implements Tailwind CSS 3.0. You can use these templates right away within your components."
       },
       "routing": {
         "title": "Routing",

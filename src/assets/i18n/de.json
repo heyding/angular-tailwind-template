@@ -57,12 +57,12 @@
         "description": "Dieses Template nutzt ngx-translate. Du kannst verschiedene Sprachen nutzen, indem du die .json Files erweiterst."
       },
       "directory": {
-        "title": "Orderstruktur",
+        "title": "Ordnerstruktur",
         "description": "Wir haben eine skalierbare Ordnerstruktur angelegt, die einer modernen Angular-Architektur entspricht."
       },
       "ngrx": {
         "title": "NgRX",
-        "description": "NgRx ist vorkonfiguriert. Du brauchst nichts zu installieren und kannst direkt Actions, Reducer und Effects für deine Feautes anlegen."
+        "description": "NgRx ist vorkonfiguriert. Du brauchst nichts zu installieren und kannst direkt Actions, Reducer und Effects für deine Features anlegen."
       },
       "standalone": {
         "title": "Standalone Components",
