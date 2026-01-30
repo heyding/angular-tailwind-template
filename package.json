@@ -1,6 +1,39 @@
 {
   "name": "angular-tailwind-template",
   "version": "0.0.0",
+  "description": "D-Stack Ready Angular 19 Enterprise Template with Tailwind CSS, NgRx, DSGVO compliance, and 25+ production-ready components for German government and public administration",
+  "keywords": [
+    "angular",
+    "angular-19",
+    "d-stack",
+    "dstack",
+    "deutschland-stack",
+    "tailwind",
+    "tailwindcss",
+    "ngrx",
+    "typescript",
+    "enterprise-template",
+    "dsgvo",
+    "gdpr",
+    "angular-template",
+    "starter-template",
+    "government",
+    "public-administration",
+    "dark-mode",
+    "i18n",
+    "authentication",
+    "state-management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heyding/angular-tailwind-template.git"
+  },
+  "homepage": "https://github.com/heyding/angular-tailwind-template#readme",
+  "bugs": {
+    "url": "https://github.com/heyding/angular-tailwind-template/issues"
+  },
+  "author": "Tommy Heyding",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

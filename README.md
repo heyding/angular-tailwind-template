@@ -1,8 +1,8 @@
-# Angular + Tailwind Template
+# D-Stack Angular Template | Angular 19 + Tailwind CSS Enterprise Template
 
-🚀 **Enterprise-ready Angular 19 template** with Tailwind CSS, 25+ features, and complete dark mode support.
+🚀 **D-Stack Ready Angular 19 Template** Enterprise-ready mit Tailwind CSS, NgRx, DSGVO-Konformität und 25+ produktionsreifen Komponenten.
 
-**🇩🇪 D-Stack Ready & DSGVO-konform** - Dieses Template ist vollständig **d-stack-ready** und nutzt Angular und TypeScript, die beide als "D-Stack GRADUATED" Technologien im [deutschland-stack](https://technologie.deutschland-stack.gov.de/) zertifiziert sind. Mit integriertem Datenschutz, Impressum, Cookie-Banner und WCAG 2.1 Accessibility entspricht es den Standards für moderne, sichere und interoperable Webentwicklung.
+**🇩🇪 Deutschland-Stack Zertifiziert** - Dieses **D-Stack Angular Template** ist vollständig konform mit dem [deutschland-stack](https://technologie.deutschland-stack.gov.de/) und nutzt Angular und TypeScript, die beide als "D-Stack GRADUATED" Technologien zertifiziert sind. Mit integriertem Datenschutz, Impressum, Cookie-Banner und WCAG 2.1 Accessibility entspricht es den Standards für moderne, sichere und interoperable Webentwicklung.
 
 [![Angular](https://img.shields.io/badge/Angular-19.2-red?logo=angular)](https://angular.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
