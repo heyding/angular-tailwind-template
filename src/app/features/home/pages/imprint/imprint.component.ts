@@ -34,7 +34,7 @@ import { TranslateModule } from '@ngx-translate/core';
                 {{ 'imprint.contact.title' | translate }}
               </h2>
               <div class="text-gray-600 dark:text-gray-300 space-y-2">
-                <p>{{ 'imprint.contact.email' | translate }}: info@example.com</p>
+                <p>{{ 'imprint.contact.email' | translate }}: info&#64;example.com</p>
                 <p>{{ 'imprint.contact.phone' | translate }}: +49 (0) 123 456789</p>
               </div>
             </div>
