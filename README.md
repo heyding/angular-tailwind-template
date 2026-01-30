@@ -2,7 +2,7 @@
 
 🚀 **Enterprise-ready Angular 19 template** with Tailwind CSS, 25+ features, and complete dark mode support.
 
-**🇩🇪 D-Stack Kompatibel** - Dieses Template nutzt Angular und TypeScript, die beide als "D-Stack GRADUATED" Technologien im [deutschland-stack](https://technologie.deutschland-stack.gov.de/) zertifiziert sind und damit den Standards für moderne, sichere und interoperable Webentwicklung in der öffentlichen Verwaltung entsprechen.
+**🇩🇪 D-Stack Ready** - Dieses Template ist vollständig **d-stack-ready** und nutzt Angular und TypeScript, die beide als "D-Stack GRADUATED" Technologien im [deutschland-stack](https://technologie.deutschland-stack.gov.de/) zertifiziert sind. Das Template entspricht damit den Standards für moderne, sichere und interoperable Webentwicklung und kann direkt in d-stack-Projekten eingesetzt werden.
 
 [![Angular](https://img.shields.io/badge/Angular-19.2-red?logo=angular)](https://angular.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
@@ -19,15 +19,20 @@ Experience all features live: Dark mode, components, authentication, state manag
 
 ## ✨ Features
 
-### 🎨 **UI Components**
-- **Button Component** - Multiple variants (primary, secondary, danger, success, outline), sizes, and states
-- **Modal Component** - Confirmation, info, and delete modals with service integration
-- **Toast Notifications** - Success, error, warning, and info toasts with animations
-- **Icon Component** - 13+ Heroicons with customizable sizes and colors
-- **Table Component** - Sortable, paginated, filterable with sticky headers
-- **Loading Spinner** - Elegant spinner with fade-in animations
-- **Skeleton Loader** - Content placeholders for loading states
-- **Theme Toggle** - Sun/Moon icon with smooth transitions
+### 🎨 **UI Components** (Ready to Use)
+
+Alle UI-Komponenten sind bereits in `app.component.ts` importiert und projekt-weit verfügbar:
+
+- **ButtonComponent** - Multiple variants (primary, secondary, danger, success, outline), sizes, and states
+- **ModalComponent** - Confirmation, info, and delete modals with service integration
+- **ToastContainerComponent** - Success, error, warning, and info toasts with animations
+- **IconComponent** - 13+ Heroicons with customizable sizes and colors
+- **TableComponent** - Sortable, paginated, filterable with sticky headers
+- **LoadingSpinnerComponent** - Elegant spinner with fade-in animations
+- **SkeletonComponent** - Content placeholders for loading states
+- **ThemeToggleComponent** - Sun/Moon icon with smooth transitions (in HeaderComponent)
+- **HeaderComponent** - Navigationsleiste mit Theme-Switcher und Logo
+- **FooterComponent** - Fußzeile mit Links und Copyright
 
 ### 🔧 **Directives & Pipes**
 - **HighlightDirective** - Hover effects with customizable colors
@@ -44,7 +49,8 @@ Experience all features live: Dark mode, components, authentication, state manag
 - **Full Coverage** - All components support dark mode
 - **Smooth Transitions** - Animated theme switching
 
-### 🏗️ **Architecture & Infrastructure**
+### 🏗️ **Architecture & Infrastructure** (Production-Ready)
+
 - **Enterprise Structure** - Features, core, shared, store, layouts, models, constants, utils
 - **Authentication** - JWT-based auth with guards and interceptors
 - **API Service** - Centralized HTTP client with error handling
@@ -54,6 +60,10 @@ Experience all features live: Dark mode, components, authentication, state manag
 - **Feature Flags** - Runtime feature toggles for A/B testing
 - **Breadcrumb Service** - Dynamic breadcrumb navigation
 - **Retry Logic** - Automatic HTTP retry with exponential backoff
+- **Theme Service** - Signal-based reactive theme management with localStorage persistence
+- **Modal Service** - Programmatic modal management
+- **Toast Service** - Notification system with queue management
+- **Loading Service** - Centralized loading state management
 
 ### 🧪 **Angular CDK Integration**
 - **Virtual Scrolling** - Efficient rendering of large lists (10,000+ items)
