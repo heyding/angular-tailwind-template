@@ -9,19 +9,17 @@ import { RequestBuilder } from '../../request-builder';
 
 import { User } from '../../models/user';
 
-export interface GetUsers$Params {}
+export interface GetUsers$Params {
+}
 
-export function getUsers(
-  http: HttpClient,
-  rootUrl: string,
-  params?: GetUsers$Params,
-  context?: HttpContext
-): Observable<StrictHttpResponse<Array<User>>> {
+export function getUsers(http: HttpClient, rootUrl: string, params?: GetUsers$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<User>>> {
   const rb = new RequestBuilder(rootUrl, getUsers.PATH, 'get');
   if (params) {
   }
 
-  return http.request(rb.build({ responseType: 'json', accept: 'application/json', context })).pipe(
+  return http.request(
+    rb.build({ responseType: 'json', accept: 'application/json', context })
+  ).pipe(
     filter((r: any): r is HttpResponse<any> => r instanceof HttpResponse),
     map((r: HttpResponse<any>) => {
       return r as StrictHttpResponse<Array<User>>;

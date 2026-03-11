@@ -11,21 +11,18 @@ import { Post } from '../../models/post';
 import { PostInput } from '../../models/post-input';
 
 export interface CreatePost$Params {
-  body: PostInput;
+      body: PostInput
 }
 
-export function createPost(
-  http: HttpClient,
-  rootUrl: string,
-  params: CreatePost$Params,
-  context?: HttpContext
-): Observable<StrictHttpResponse<Post>> {
+export function createPost(http: HttpClient, rootUrl: string, params: CreatePost$Params, context?: HttpContext): Observable<StrictHttpResponse<Post>> {
   const rb = new RequestBuilder(rootUrl, createPost.PATH, 'post');
   if (params) {
     rb.body(params.body, 'application/json');
   }
 
-  return http.request(rb.build({ responseType: 'json', accept: 'application/json', context })).pipe(
+  return http.request(
+    rb.build({ responseType: 'json', accept: 'application/json', context })
+  ).pipe(
     filter((r: any): r is HttpResponse<any> => r instanceof HttpResponse),
     map((r: HttpResponse<any>) => {
       return r as StrictHttpResponse<Post>;

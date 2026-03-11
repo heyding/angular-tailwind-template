@@ -41,10 +41,7 @@ export class PostsService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  getPosts$Response(
-    params?: GetPosts$Params,
-    context?: HttpContext
-  ): Observable<StrictHttpResponse<Array<Post>>> {
+  getPosts$Response(params?: GetPosts$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<Post>>> {
     const obs = getPosts(this.http, this.rootUrl, params, context);
     return obs;
   }
@@ -61,7 +58,9 @@ export class PostsService extends BaseService {
    */
   getPosts(params?: GetPosts$Params, context?: HttpContext): Observable<Array<Post>> {
     const resp = this.getPosts$Response(params, context);
-    return resp.pipe(map((r: StrictHttpResponse<Array<Post>>): Array<Post> => r.body));
+    return resp.pipe(
+      map((r: StrictHttpResponse<Array<Post>>): Array<Post> => r.body)
+    );
   }
 
   /** Path part for operation `createPost()` */
@@ -77,10 +76,7 @@ export class PostsService extends BaseService {
    *
    * This method sends `application/json` and handles request body of type `application/json`.
    */
-  createPost$Response(
-    params: CreatePost$Params,
-    context?: HttpContext
-  ): Observable<StrictHttpResponse<Post>> {
+  createPost$Response(params: CreatePost$Params, context?: HttpContext): Observable<StrictHttpResponse<Post>> {
     const obs = createPost(this.http, this.rootUrl, params, context);
     return obs;
   }
@@ -97,7 +93,9 @@ export class PostsService extends BaseService {
    */
   createPost(params: CreatePost$Params, context?: HttpContext): Observable<Post> {
     const resp = this.createPost$Response(params, context);
-    return resp.pipe(map((r: StrictHttpResponse<Post>): Post => r.body));
+    return resp.pipe(
+      map((r: StrictHttpResponse<Post>): Post => r.body)
+    );
   }
 
   /** Path part for operation `updatePost()` */
@@ -113,10 +111,7 @@ export class PostsService extends BaseService {
    *
    * This method sends `application/json` and handles request body of type `application/json`.
    */
-  updatePost$Response(
-    params: UpdatePost$Params,
-    context?: HttpContext
-  ): Observable<StrictHttpResponse<Post>> {
+  updatePost$Response(params: UpdatePost$Params, context?: HttpContext): Observable<StrictHttpResponse<Post>> {
     const obs = updatePost(this.http, this.rootUrl, params, context);
     return obs;
   }
@@ -133,7 +128,9 @@ export class PostsService extends BaseService {
    */
   updatePost(params: UpdatePost$Params, context?: HttpContext): Observable<Post> {
     const resp = this.updatePost$Response(params, context);
-    return resp.pipe(map((r: StrictHttpResponse<Post>): Post => r.body));
+    return resp.pipe(
+      map((r: StrictHttpResponse<Post>): Post => r.body)
+    );
   }
 
   /** Path part for operation `deletePost()` */
@@ -149,10 +146,7 @@ export class PostsService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  deletePost$Response(
-    params: DeletePost$Params,
-    context?: HttpContext
-  ): Observable<StrictHttpResponse<void>> {
+  deletePost$Response(params: DeletePost$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {
     const obs = deletePost(this.http, this.rootUrl, params, context);
     return obs;
   }
@@ -169,7 +163,9 @@ export class PostsService extends BaseService {
    */
   deletePost(params: DeletePost$Params, context?: HttpContext): Observable<void> {
     const resp = this.deletePost$Response(params, context);
-    return resp.pipe(map((r: StrictHttpResponse<void>): void => r.body));
+    return resp.pipe(
+      map((r: StrictHttpResponse<void>): void => r.body)
+    );
   }
 
   /** Path part for operation `patchPost()` */
@@ -185,10 +181,7 @@ export class PostsService extends BaseService {
    *
    * This method sends `application/json` and handles request body of type `application/json`.
    */
-  patchPost$Response(
-    params: PatchPost$Params,
-    context?: HttpContext
-  ): Observable<StrictHttpResponse<Post>> {
+  patchPost$Response(params: PatchPost$Params, context?: HttpContext): Observable<StrictHttpResponse<Post>> {
     const obs = patchPost(this.http, this.rootUrl, params, context);
     return obs;
   }
@@ -205,6 +198,9 @@ export class PostsService extends BaseService {
    */
   patchPost(params: PatchPost$Params, context?: HttpContext): Observable<Post> {
     const resp = this.patchPost$Response(params, context);
-    return resp.pipe(map((r: StrictHttpResponse<Post>): Post => r.body));
+    return resp.pipe(
+      map((r: StrictHttpResponse<Post>): Post => r.body)
+    );
   }
+
 }

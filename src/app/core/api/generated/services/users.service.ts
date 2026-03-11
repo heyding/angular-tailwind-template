@@ -35,10 +35,7 @@ export class UsersService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  getUsers$Response(
-    params?: GetUsers$Params,
-    context?: HttpContext
-  ): Observable<StrictHttpResponse<Array<User>>> {
+  getUsers$Response(params?: GetUsers$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<User>>> {
     const obs = getUsers(this.http, this.rootUrl, params, context);
     return obs;
   }
@@ -55,7 +52,9 @@ export class UsersService extends BaseService {
    */
   getUsers(params?: GetUsers$Params, context?: HttpContext): Observable<Array<User>> {
     const resp = this.getUsers$Response(params, context);
-    return resp.pipe(map((r: StrictHttpResponse<Array<User>>): Array<User> => r.body));
+    return resp.pipe(
+      map((r: StrictHttpResponse<Array<User>>): Array<User> => r.body)
+    );
   }
 
   /** Path part for operation `getUserById()` */
@@ -71,10 +70,7 @@ export class UsersService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  getUserById$Response(
-    params: GetUserById$Params,
-    context?: HttpContext
-  ): Observable<StrictHttpResponse<User>> {
+  getUserById$Response(params: GetUserById$Params, context?: HttpContext): Observable<StrictHttpResponse<User>> {
     const obs = getUserById(this.http, this.rootUrl, params, context);
     return obs;
   }
@@ -91,6 +87,9 @@ export class UsersService extends BaseService {
    */
   getUserById(params: GetUserById$Params, context?: HttpContext): Observable<User> {
     const resp = this.getUserById$Response(params, context);
-    return resp.pipe(map((r: StrictHttpResponse<User>): User => r.body));
+    return resp.pipe(
+      map((r: StrictHttpResponse<User>): User => r.body)
+    );
   }
+
 }

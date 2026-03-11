@@ -12,22 +12,19 @@ import { PostInput } from '../../models/post-input';
 
 export interface UpdatePost$Params {
   id: number;
-  body: PostInput;
+      body: PostInput
 }
 
-export function updatePost(
-  http: HttpClient,
-  rootUrl: string,
-  params: UpdatePost$Params,
-  context?: HttpContext
-): Observable<StrictHttpResponse<Post>> {
+export function updatePost(http: HttpClient, rootUrl: string, params: UpdatePost$Params, context?: HttpContext): Observable<StrictHttpResponse<Post>> {
   const rb = new RequestBuilder(rootUrl, updatePost.PATH, 'put');
   if (params) {
     rb.path('id', params.id, {});
     rb.body(params.body, 'application/json');
   }
 
-  return http.request(rb.build({ responseType: 'json', accept: 'application/json', context })).pipe(
+  return http.request(
+    rb.build({ responseType: 'json', accept: 'application/json', context })
+  ).pipe(
     filter((r: any): r is HttpResponse<any> => r instanceof HttpResponse),
     map((r: HttpResponse<any>) => {
       return r as StrictHttpResponse<Post>;

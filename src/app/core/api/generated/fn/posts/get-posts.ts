@@ -13,18 +13,15 @@ export interface GetPosts$Params {
   userId?: number;
 }
 
-export function getPosts(
-  http: HttpClient,
-  rootUrl: string,
-  params?: GetPosts$Params,
-  context?: HttpContext
-): Observable<StrictHttpResponse<Array<Post>>> {
+export function getPosts(http: HttpClient, rootUrl: string, params?: GetPosts$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<Post>>> {
   const rb = new RequestBuilder(rootUrl, getPosts.PATH, 'get');
   if (params) {
     rb.query('userId', params.userId, {});
   }
 
-  return http.request(rb.build({ responseType: 'json', accept: 'application/json', context })).pipe(
+  return http.request(
+    rb.build({ responseType: 'json', accept: 'application/json', context })
+  ).pipe(
     filter((r: any): r is HttpResponse<any> => r instanceof HttpResponse),
     map((r: HttpResponse<any>) => {
       return r as StrictHttpResponse<Array<Post>>;
