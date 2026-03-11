@@ -4,7 +4,7 @@ test.describe('Smoke tests', () => {
   test('loads home route and core layout', async ({ page }) => {
     await page.goto('/');
 
-    await expect(page).toHaveTitle(/Angular \+ Tailwind Template/i);
+    await expect(page).toHaveTitle(/Angular Template/i);
     await expect(page.getByText(/D-Stack Ready/i).first()).toBeVisible();
     await expect(page.getByRole('link', { name: /Datenschutz/i })).toBeVisible();
   });
