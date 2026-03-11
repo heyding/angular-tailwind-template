@@ -52,13 +52,13 @@
               [(ngModel)]="userInput"
               (ngModelChange)="hideUserInput()"
               placeholder="Enter some text to store in NgRx..."
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all"
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#0077b6] dark:focus:ring-[#48cae4] focus:border-transparent transition-all"
             ></textarea>
             <div class="flex gap-3 justify-center">
               <button
                 type="button"
                 (click)="storeUserInput(userInput!)"
-                class="px-6 py-3 rounded-xl font-semibold brand-gradient text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+                class="px-6 py-3 rounded-xl font-semibold brand-gradient text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0077b6] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
               >
                 {{ 'home.ngrx.button.store' | translate }}
               </button>

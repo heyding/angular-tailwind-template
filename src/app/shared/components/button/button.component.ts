@@ -1,5 +1,5 @@
-import { Component, input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, input, output } from '@angular/core';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -47,15 +47,15 @@ export class ButtonComponent {
 
     const variantClasses = {
       primary:
-        'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 focus:ring-indigo-500 dark:from-indigo-500 dark:to-purple-500',
+        'bg-gradient-to-r from-[#0077b6] to-[#0096c7] text-white hover:from-[#023e8a] hover:to-[#0077b6] focus:ring-[#0077b6]',
       secondary:
         'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 focus:ring-gray-500',
       outline:
-        'border-2 border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900 dark:hover:bg-opacity-20 focus:ring-indigo-500',
+        'border-2 border-[#0077b6] dark:border-[#48cae4] text-[#0077b6] dark:text-[#48cae4] hover:bg-[#caf0f8] dark:hover:bg-[#023e8a]/20 focus:ring-[#0077b6]',
       ghost:
-        'text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900 dark:hover:bg-opacity-20 focus:ring-indigo-500',
+        'text-[#0077b6] dark:text-[#48cae4] hover:bg-[#caf0f8] dark:hover:bg-[#023e8a]/20 focus:ring-[#0077b6]',
       danger:
-        'bg-gradient-to-r from-red-600 to-pink-600 text-white hover:from-red-700 hover:to-pink-700 focus:ring-red-500',
+        'bg-gradient-to-r from-red-600 to-red-700 text-white hover:from-red-700 hover:to-red-800 focus:ring-red-500',
     };
 
     const sizeClasses = {

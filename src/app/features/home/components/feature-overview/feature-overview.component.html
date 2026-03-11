@@ -9,12 +9,12 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
         *ngFor="let feature of features"
-        class="group relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-300 transform hover:-translate-y-1"
+        class="group relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 hover:border-[#0096c7] dark:hover:border-[#48cae4] transition-all duration-300 transform hover:-translate-y-1"
       >
         <div class="flex items-start gap-4">
           <div class="flex-shrink-0">
             <div
-              class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
+              class="w-12 h-12 bg-gradient-to-br from-[#0077b6] to-[#0096c7] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
             >
               <svg
                 class="h-6 w-6 text-white"
@@ -34,7 +34,7 @@
           </div>
           <div class="flex-1 min-w-0">
             <h3
-              class="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"
+              class="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#0077b6] dark:group-hover:text-[#48cae4] transition-colors"
             >
               {{ 'features.feature-list.' + feature + '.title' | translate }}
             </h3>

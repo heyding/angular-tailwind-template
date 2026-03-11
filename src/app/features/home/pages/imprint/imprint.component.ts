@@ -62,7 +62,7 @@ import { TranslateModule } from '@ngx-translate/core';
                 href="https://ec.europa.eu/consumers/odr"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-blue-600 hover:text-blue-700 dark:text-blue-400 underline"
+                class="text-[#0077b6] hover:text-[#023e8a] dark:text-[#48cae4] underline"
               >
                 https://ec.europa.eu/consumers/odr
               </a>
@@ -91,11 +91,11 @@ import { TranslateModule } from '@ngx-translate/core';
 
             <!-- D-Stack Badge -->
             <div
-              class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800 p-6 rounded-lg"
+              class="bg-gradient-to-r from-[#caf0f8] to-[#90e0ef] dark:from-[#023e8a]/20 dark:to-[#0077b6]/20 border border-[#90e0ef] dark:border-[#0077b6] p-6 rounded-lg"
             >
               <div class="flex items-center gap-3 mb-2">
                 <svg
-                  class="w-6 h-6 text-blue-600 dark:text-blue-400"
+                  class="w-6 h-6 text-[#0077b6] dark:text-[#48cae4]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -119,7 +119,7 @@ import { TranslateModule } from '@ngx-translate/core';
           <div class="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700">
             <a
               routerLink="/home"
-              class="inline-flex items-center text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors"
+              class="inline-flex items-center text-[#0077b6] hover:text-[#023e8a] dark:text-[#48cae4] dark:hover:text-[#90e0ef] font-medium transition-colors"
             >
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
