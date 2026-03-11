@@ -72,8 +72,6 @@ const DEFAULT_BRAND_CONFIG: BrandConfig = {
 export class BrandingService {
   private readonly brandSubject = new BehaviorSubject<BrandConfig>(DEFAULT_BRAND_CONFIG);
 
-  readonly brand$ = this.brandSubject.asObservable();
-
   constructor(
     private http: HttpClient,
     @Inject(DOCUMENT) private document: Document
@@ -144,6 +142,5 @@ export class BrandingService {
     rootStyle.setProperty('--brand-surface', config.design.surface);
     rootStyle.setProperty('--brand-text', config.design.text);
     rootStyle.setProperty('--brand-text-muted', config.design.textMuted);
-    rootStyle.setProperty('--brand-hero-image', `url("${config.design.heroImageUrl}")`);
   }
 }

@@ -11,7 +11,6 @@
   --brand-surface: #ade8f4;
   --brand-text: #03045e;
   --brand-text-muted: #023e8a;
-  --brand-hero-image: none;
 }
 
 @layer base {
@@ -71,12 +70,5 @@
 
   .brand-link:hover {
     color: var(--brand-secondary);
-  }
-
-  .brand-hero-image {
-    background-image: var(--brand-hero-image);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
