@@ -26,7 +26,7 @@ import { metaReducers, reducers } from './store/app.reducer';
 
 // Factory function for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 // Initialize theme on app start
