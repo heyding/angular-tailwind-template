@@ -46,6 +46,26 @@ npm start
 - **[Quickstart Guide](QUICKSTART.md)** - 5-Minuten Setup für geforktes Projekt
 - **[Contributing Guide](CONTRIBUTING.md)** - Wie du zum Template beitragen kannst
 
+## 🗺️ Roadmap (3 Phasen)
+
+### Phase 1: Quick Wins
+
+- Playwright Smoke-Tests fuer Kernrouten (`/`, `/login`, `/components`)
+- Lighthouse CI als Quality Gate fuer Accessibility/SEO/Performance
+- CI-Artefakte fuer Testreports (Playwright HTML Report)
+
+### Phase 2: Mid-Term
+
+- API Client Generierung via OpenAPI
+- Error Monitoring (z. B. Sentry) mit globaler Fehlerkorrelation
+- Verbesserte Release Automation (Conventional Commits + semantic-release)
+
+### Phase 3: Enterprise Hardening
+
+- SSR + Hydration fuer SEO/Core Web Vitals
+- PWA-Strategie (Offline/Fallback/Installbarkeit)
+- Security/Compliance Gates (Dependency + Secret Scans, CSP-Validierung)
+
 ## ✨ Features
 
 ### 🇩🇪 **D-Stack & DSGVO Compliance**
@@ -191,6 +211,18 @@ npm run build
 
 # Run tests
 npm test
+
+# End-to-end smoke tests
+npm run e2e
+
+# E2E tests for CI
+npm run e2e:ci
+
+# Lighthouse CI (build + audit)
+npm run lhci
+
+# Combined quality checks
+npm run quality
 
 # Code formatting
 npm run format
