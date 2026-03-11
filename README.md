@@ -15,7 +15,7 @@
 
 ## 🌐 Live Demo
 
-**🔗 [View Live Demo](https://angular-tailwind-demo-dl6yx.ondigitalocean.app/home)**
+**🔗 [View Live Demo](https://heyding.github.io/angular-tailwind-template/)**
 
 Experience all features live: Dark mode, components, authentication, state management, and more!
 

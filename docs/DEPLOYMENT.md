@@ -1,20 +1,69 @@
-# Digital Ocean Deployment Guide
+# Deployment Guide
 
-This guide explains how to deploy the Angular Tailwind Template to Digital Ocean App Platform.
+This guide explains how to deploy the Angular Tailwind Template.
 
 ## 🌐 Live Demo
 
-**🔗 [View Live Demo](https://angular-tailwind-template-xxxxx.ondigitalocean.app)** *(Update with your actual URL)*
+**🔗 [View Live Demo](https://heyding.github.io/angular-tailwind-template/)** *(GitHub Pages)*
 
-## 📋 Prerequisites
+---
+
+## 🚀 Option 1: GitHub Pages (Recommended – Free)
+
+Deploy as a static site on GitHub Pages – **no server costs**.
+
+### Step 1: Enable GitHub Pages
+
+1. Go to your repository on GitHub
+2. **Settings** → **Pages**
+3. Under **Source**, select **GitHub Actions**
+
+### Step 2: Push to `main`
+
+The workflow [`.github/workflows/gh-pages.yml`](../.github/workflows/gh-pages.yml) runs automatically on every push to `main`:
+
+1. Installs dependencies
+2. Builds with `npm run build:gh-pages` (sets `--base-href /angular-tailwind-template/`)
+3. Copies `index.html` → `404.html` (SPA routing fix)
+4. Deploys to GitHub Pages
+
+### Step 3: Access your site
+
+After the first successful workflow run, your app is live at:
+
+```
+https://heyding.github.io/angular-tailwind-template/
+```
+
+### Manual Trigger
+
+You can also trigger the deployment manually:
+1. Go to **Actions** → **Deploy to GitHub Pages**
+2. Click **Run workflow** → **Run workflow**
+
+### Custom Domain (Optional)
+
+1. In repo **Settings** → **Pages** → **Custom domain**, enter your domain
+2. Add a CNAME record at your DNS provider pointing to `heyding.github.io`
+3. Update `build:gh-pages` in `package.json` to use `--base-href /` instead
+
+### Limitations
+
+- GitHub Pages serves static files only – no server-side API calls
+- The `404.html` trick handles SPA routing, but crawlers may not follow all routes
+- Free for public repos, included in GitHub Pro/Team for private repos
+
+---
+
+## 🚀 Option 2: Digital Ocean App Platform
+
+### Prerequisites
 
 1. **Digital Ocean Account** - [Sign up here](https://www.digitalocean.com/)
 2. **GitHub Account** - Your repository must be on GitHub
 3. **Docker** (optional for local testing)
 
-## 🚀 Deployment Options
-
-### Option 1: Automatic Deployment via GitHub (Recommended)
+### Option 2a: Automatic Deployment via GitHub
 
 This method uses GitHub Actions to automatically deploy when you push to the `main` branch.
 
@@ -43,7 +92,7 @@ Digital Ocean will automatically detect the Dockerfile. Configure:
 1. Click **"Next"** and review the settings
 2. Click **"Create Resources"**
 3. Wait for the initial deployment (~5-10 minutes)
-4. Your app will be available at: `https://angular-tailwind-template-xxxxx.ondigitalocean.app`
+4. Your app will be available at: `https://your-app-xxxxx.ondigitalocean.app`
 
 #### Step 4: Enable Auto-Deploy (Optional)
 
