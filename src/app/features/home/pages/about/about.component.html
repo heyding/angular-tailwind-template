@@ -16,18 +16,18 @@
           <div class="space-y-6">
             <img
               class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
-              src="https://media-exp1.licdn.com/dms/image/C4D03AQFz6W4HP_OKgQ/profile-displayphoto-shrink_200_200/0/1606677885285?e=1654732800&v=beta&t=YbUFzfOYXPgywDoYXyYNvqOWY1AkKvnqCbrd9xvibiI"
-              alt=""
+              [src]="brandText.developerImageUrl"
+              [alt]="brandText.developerName"
             />
             <div class="space-y-2">
               <div class="text-lg leading-6 font-medium space-y-1">
-                <h3 class="text-gray-900 dark:text-white">Tommy Heyding</h3>
-                <p class="text-indigo-600 dark:text-indigo-400">Software Developer</p>
+                <h3 class="text-gray-900 dark:text-white">{{ brandText.developerName }}</h3>
+                <p class="brand-text-primary">{{ brandText.developerRole }}</p>
               </div>
               <ul role="list" class="flex justify-center space-x-5">
                 <li>
                   <a
-                    href="https://www.linkedin.com/in/tommyheyding/"
+                    [href]="brandText.developerLinkedinUrl"
                     target="_blank"
                     class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400"
                   >

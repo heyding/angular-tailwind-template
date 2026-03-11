@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 interface VirtualItem {
@@ -66,9 +66,9 @@ export class VirtualScrollDemoComponent implements OnInit {
     const colors: Record<string, string> = {
       Technology: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
       Business: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-      Science: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
+      Science: 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200',
       Sports: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
-      Entertainment: 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200',
+      Entertainment: 'bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-200',
     };
     return colors[category] || 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200';
   }

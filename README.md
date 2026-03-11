@@ -46,6 +46,42 @@ npm start
 - **[Quickstart Guide](QUICKSTART.md)** - 5-Minuten Setup für geforktes Projekt
 - **[Contributing Guide](CONTRIBUTING.md)** - Wie du zum Template beitragen kannst
 
+## 🎯 Branding konfigurieren
+
+Alle zentralen Branding-Werte sind über eine Datei konfigurierbar:
+
+- `src/assets/branding/brand.config.json`
+
+Darüber steuerst du u. a.:
+
+- Farben (Primary, Secondary, Accent)
+- Schriftart (globale Font Family)
+- Hero-Hintergrundbild
+- App-Name, Logo-Initiale, Footer-Labels und Links
+- Developer-Daten auf der About-Seite
+
+Nach Änderungen reicht ein normaler Neustart des Dev-Servers (`npm start`) oder ein Reload bei laufendem Server.
+
+## 🗺️ Roadmap (3 Phasen)
+
+### Phase 1: Quick Wins
+
+- Playwright Smoke-Tests fuer Kernrouten (`/`, `/login`, `/components`)
+- Lighthouse CI als Quality Gate fuer Accessibility/SEO/Performance
+- CI-Artefakte fuer Testreports (Playwright HTML Report)
+
+### Phase 2: Mid-Term
+
+- API Client Generierung via OpenAPI
+- Error Monitoring (z. B. Sentry) mit globaler Fehlerkorrelation
+- Verbesserte Release Automation (Conventional Commits + semantic-release)
+
+### Phase 3: Enterprise Hardening
+
+- SSR + Hydration fuer SEO/Core Web Vitals
+- PWA-Strategie (Offline/Fallback/Installbarkeit)
+- Security/Compliance Gates (Dependency + Secret Scans, CSP-Validierung)
+
 ## ✨ Features
 
 ### 🇩🇪 **D-Stack & DSGVO Compliance**
@@ -189,8 +225,23 @@ npm start
 # Production build
 npm run build
 
+# Generate typed Angular client from OpenAPI
+npm run openapi:generate
+
 # Run tests
 npm test
+
+# End-to-end smoke tests
+npm run e2e
+
+# E2E tests for CI
+npm run e2e:ci
+
+# Lighthouse CI (build + audit)
+npm run lhci
+
+# Combined quality checks
+npm run quality
 
 # Code formatting
 npm run format

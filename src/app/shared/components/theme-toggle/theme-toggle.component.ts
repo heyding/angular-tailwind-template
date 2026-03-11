@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
@@ -32,7 +32,7 @@ import { ThemeService } from '../../services/theme.service';
         } @else {
           <!-- Moon Icon -->
           <svg
-            class="w-5 h-5 text-indigo-600 group-hover:text-indigo-500 transition-colors absolute inset-0"
+            class="w-5 h-5 text-[#0077b6] group-hover:text-[#0096c7] transition-colors absolute inset-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

@@ -5,7 +5,7 @@
     <!-- Header -->
     <div class="text-center">
       <div
-        class="mx-auto w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4"
+        class="mx-auto w-16 h-16 bg-gradient-to-br from-[#0077b6] to-[#0096c7] rounded-2xl flex items-center justify-center mb-4"
       >
         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -44,7 +44,7 @@
               'w-full px-4 py-3 border rounded-xl shadow-sm focus:outline-none focus:ring-2 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition-all ' +
               (email?.touched && email?.invalid
                 ? 'border-red-500 focus:ring-red-500 dark:border-red-400'
-                : 'border-gray-300 dark:border-gray-600 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent')
+                : 'border-gray-300 dark:border-gray-600 focus:ring-[#0077b6] dark:focus:ring-[#48cae4] focus:border-transparent')
             "
             [attr.aria-invalid]="email?.touched && email?.invalid"
             [attr.aria-describedby]="email?.touched && email?.invalid ? 'email-error' : null"
@@ -85,7 +85,7 @@
               'w-full px-4 py-3 border rounded-xl shadow-sm focus:outline-none focus:ring-2 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition-all ' +
               (password?.touched && password?.invalid
                 ? 'border-red-500 focus:ring-red-500 dark:border-red-400'
-                : 'border-gray-300 dark:border-gray-600 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent')
+                : 'border-gray-300 dark:border-gray-600 focus:ring-[#0077b6] dark:focus:ring-[#48cae4] focus:border-transparent')
             "
             [attr.aria-invalid]="password?.touched && password?.invalid"
             [attr.aria-describedby]="
@@ -112,12 +112,12 @@
 
       <!-- Demo Credentials Info -->
       <div
-        class="rounded-xl bg-indigo-50 dark:bg-indigo-900 dark:bg-opacity-20 border border-indigo-200 dark:border-indigo-800 p-4"
+        class="rounded-xl bg-[#caf0f8] dark:bg-[#023e8a]/20 border border-[#90e0ef] dark:border-[#0077b6] p-4"
       >
         <div class="flex">
           <div class="flex-shrink-0">
             <svg
-              class="h-6 w-6 text-indigo-600 dark:text-indigo-400"
+              class="h-6 w-6 text-[#0077b6] dark:text-[#48cae4]"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
@@ -130,10 +130,10 @@
             </svg>
           </div>
           <div class="ml-3 flex-1">
-            <h3 class="text-sm font-semibold text-indigo-900 dark:text-indigo-300 mb-1">
+            <h3 class="text-sm font-semibold text-[#03045e] dark:text-[#90e0ef] mb-1">
               {{ 'login.demoInfo' | translate }}
             </h3>
-            <div class="space-y-1 text-sm text-indigo-800 dark:text-indigo-400">
+            <div class="space-y-1 text-sm text-[#023e8a] dark:text-[#48cae4]">
               <p class="font-mono">{{ 'login.demoEmail' | translate }}</p>
               <p class="font-mono">{{ 'login.demoPassword' | translate }}</p>
             </div>

@@ -1,18 +1,18 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { User } from '../../../../core/api/generated/models/user';
+import { UsersFacadeService } from '../../../../core/services/users-facade.service';
 import { TableComponent } from '../../../../shared/components/table/table.component';
-import { TableColumn, TableConfig } from '../../../../shared/models/table.model';
-import { ApiService } from '../../../../core/services/api.service';
-import { User } from '../../../../core/models/api.model';
-import { TruncatePipe } from '../../../../shared/pipes/truncate.pipe';
-import { FormatNumberPipe } from '../../../../shared/pipes/format-number.pipe';
-import { TimeAgoPipe } from '../../../../shared/pipes/time-ago.pipe';
-import { HighlightPipe } from '../../../../shared/pipes/highlight.pipe';
+import { ClickOutsideDirective } from '../../../../shared/directives/click-outside.directive';
 import { HighlightDirective } from '../../../../shared/directives/highlight.directive';
 import { TooltipDirective } from '../../../../shared/directives/tooltip.directive';
-import { ClickOutsideDirective } from '../../../../shared/directives/click-outside.directive';
+import { TableColumn, TableConfig } from '../../../../shared/models/table.model';
+import { FormatNumberPipe } from '../../../../shared/pipes/format-number.pipe';
+import { HighlightPipe } from '../../../../shared/pipes/highlight.pipe';
+import { TimeAgoPipe } from '../../../../shared/pipes/time-ago.pipe';
+import { TruncatePipe } from '../../../../shared/pipes/truncate.pipe';
 
 @Component({
   selector: 'app-features-demo',
@@ -74,7 +74,7 @@ export class FeaturesDemoComponent implements OnInit {
   largeNumber = 1234567.89;
   pastDate = new Date(Date.now() - 2 * 60 * 60 * 1000); // 2 hours ago
 
-  constructor(private apiService: ApiService) {}
+  constructor(private usersFacade: UsersFacadeService) {}
 
   ngOnInit(): void {
     this.loadUsers();
@@ -82,7 +82,7 @@ export class FeaturesDemoComponent implements OnInit {
 
   loadUsers(): void {
     this.loading = true;
-    this.apiService.getUsers().subscribe({
+    this.usersFacade.getUsers().subscribe({
       next: users => {
         this.users = users;
         this.loading = false;

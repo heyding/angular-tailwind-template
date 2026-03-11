@@ -88,6 +88,53 @@ theme: {
 }
 ```
 
+### Branding zentral konfigurieren (empfohlen)
+
+Alle Branding-Werte (Design + Texte) sind zentral konfigurierbar in:
+
+- `src/assets/branding/brand.config.json`
+
+Beispiel:
+
+```json
+{
+  "design": {
+    "fontFamily": "Inter, sans-serif",
+    "primary": "#4f46e5",
+    "secondary": "#7c3aed",
+    "accent": "#ec4899",
+    "background": "#f9fafb",
+    "surface": "#ffffff",
+    "text": "#111827",
+    "textMuted": "#6b7280",
+    "heroImageUrl": "https://example.com/hero.jpg"
+  },
+  "text": {
+    "appName": "Mein Produkt",
+    "appInitial": "M",
+    "skipToContentLabel": "Zum Hauptinhalt springen",
+    "complianceBadgeLabel": "D-Stack Ready",
+    "complianceText": "Dieses Template ist konform mit den Standards des",
+    "complianceLinkLabel": "deutschland-stack",
+    "complianceLinkUrl": "https://technologie.deutschland-stack.gov.de/",
+    "footerCompanyName": "Mein Unternehmen",
+    "footerLearnMoreUrl": "https://github.com/my-org/my-repo",
+    "privacyLabel": "Datenschutz",
+    "imprintLabel": "Impressum",
+    "developerName": "Max Mustermann",
+    "developerRole": "Frontend Engineer",
+    "developerLinkedinUrl": "https://www.linkedin.com/in/max/",
+    "developerImageUrl": "assets/img/max.jpg"
+  }
+}
+```
+
+Hinweise:
+
+- Der `BrandingService` lädt die Datei beim App-Start.
+- Fehlende Felder fallen automatisch auf Defaults zurück.
+- Im Dev-Modus gibt es Warnungen in der Konsole, wenn Felder fehlen.
+
 ### D-Stack Banner anpassen/entfernen
 
 **`src/app/app.component.html`**
@@ -262,29 +309,24 @@ rm -rf src/app/features/admin
 
 ## 🔌 API Integration
 
-### API Service anpassen
+### API Services anpassen (OpenAPI + Facades)
 
-**`src/app/core/services/api.service.ts`**
+Das Template nutzt generierte OpenAPI-Services plus Facade-Schicht:
 
-```typescript
-@Injectable({
-  providedIn: 'root',
-})
-export class ApiService {
-  private apiUrl = environment.apiUrl;
+- OpenAPI Spec: `openapi/openapi.yaml`
+- Generator Config: `ng-openapi-gen.json`
+- Generierter Client: `src/app/core/api/generated/`
+- App-nahe Facades:
+  - `src/app/core/services/users-facade.service.ts`
+  - `src/app/core/services/posts-facade.service.ts`
 
-  constructor(private http: HttpClient) {}
+Bei API-Änderungen:
 
-  // Eigene API-Endpunkte hinzufügen
-  getMyData(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/my-endpoint`);
-  }
-
-  postMyData(data: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/my-endpoint`, data);
-  }
-}
+```bash
+npm run openapi:generate
 ```
+
+Danach bindest du neue Endpunkte idealerweise über die Facades in deine Komponenten ein.
 
 ### Eigene Models erstellen
 

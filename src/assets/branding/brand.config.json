@@ -1,0 +1,30 @@
+{
+  "design": {
+    "fontFamily": "Inter, sans-serif",
+    "primary": "#0077b6",
+    "secondary": "#0096c7",
+    "accent": "#48cae4",
+    "background": "#caf0f8",
+    "surface": "#ade8f4",
+    "text": "#03045e",
+    "textMuted": "#023e8a",
+    "heroImageUrl": "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
+  },
+  "text": {
+    "appName": "Angular Template",
+    "appInitial": "A",
+    "skipToContentLabel": "Zum Hauptinhalt springen",
+    "complianceBadgeLabel": "🇩🇪 D-Stack Ready",
+    "complianceText": "Dieses Template ist vollständig konform mit den Standards des",
+    "complianceLinkLabel": "deutschland-stack",
+    "complianceLinkUrl": "https://technologie.deutschland-stack.gov.de/",
+    "footerCompanyName": "Angular Tailwind Template",
+    "footerLearnMoreUrl": "https://github.com/heyding/angular-tailwind-template",
+    "privacyLabel": "Datenschutz",
+    "imprintLabel": "Impressum",
+    "developerName": "Tommy Heyding",
+    "developerRole": "Software Developer",
+    "developerLinkedinUrl": "https://www.linkedin.com/in/tommyheyding/",
+    "developerImageUrl": "assets/img/tommy-heyding.jpeg"
+  }
+}
