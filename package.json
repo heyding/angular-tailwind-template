@@ -42,6 +42,7 @@
     "build:gh-pages": "ng build --base-href /angular-tailwind-template/",
     "openapi:generate": "ng-openapi-gen --config ng-openapi-gen.json",
     "openapi:clean": "rm -rf src/app/core/api/generated",
+    "openapi:check": "npm run openapi:generate && git diff --exit-code -- src/app/core/api/generated",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "playwright test",
