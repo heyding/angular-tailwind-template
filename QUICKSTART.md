@@ -108,7 +108,7 @@ docker run -p 8080:80 dein-projekt
 ## 📚 Weitere Dokumentation
 
 - **[CUSTOMIZATION.md](docs/CUSTOMIZATION.md)** - Vollständige Anpassungs-Anleitung
-- **[DEPLOYMENT.md](docs/DEPLOYMENT.md)** - Deployment zu Digital Ocean
+- **[DEPLOYMENT.md](docs/DEPLOYMENT.md)** - Deployment zu GitHub Pages
 - **[PRE-COMMIT-HOOKS.md](docs/PRE-COMMIT-HOOKS.md)** - Code-Qualität Hooks
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - Beitragen zum Template
 
@@ -140,7 +140,7 @@ Nach dem Fork solltest du folgendes aktualisieren:
 1. ✅ Branding & Projekt-Info anpassen
 2. ✅ Deine ersten Features entwickeln
 3. ✅ Tests schreiben
-4. ✅ Deploy zu Digital Ocean (siehe [DEPLOYMENT.md](docs/DEPLOYMENT.md))
+4. ✅ Deploy zu GitHub Pages (siehe [DEPLOYMENT.md](docs/DEPLOYMENT.md))
 5. ✅ Star ⭐ dem Original-Template geben, wenn es dir hilft!
 
 ---

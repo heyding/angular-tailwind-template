@@ -315,16 +315,6 @@ export interface MyModel {
 ARG API_URL=https://api.dein-projekt.de
 ```
 
-### Digital Ocean anpassen
-
-**`.do/app.yaml`**
-```yaml
-name: dein-projekt-name
-services:
-  - name: dein-projekt
-    # ... weitere Anpassungen
-```
-
 ### Nginx Configuration
 
 **`nginx.conf`**

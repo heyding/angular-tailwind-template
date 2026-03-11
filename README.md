@@ -11,7 +11,7 @@
 [![DSGVO](https://img.shields.io/badge/DSGVO-Konform-success)](https://dsgvo-gesetz.de/)
 [![WCAG](https://img.shields.io/badge/WCAG-2.1-blue)](https://www.w3.org/WAI/WCAG21/quickref/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)](https://www.docker.com/)
-[![Digital Ocean](https://img.shields.io/badge/Deploy-Digital%20Ocean-0080FF?logo=digitalocean)](https://www.digitalocean.com/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)](https://heyding.github.io/angular-tailwind-template/)
 
 ## 🌐 Live Demo
 
@@ -172,26 +172,13 @@ docker-compose up
 
 Visit `http://localhost:8080` to test the production build.
 
-### Deploy to Digital Ocean
+### Deploy to GitHub Pages
 
-See the complete [Deployment Guide](./DEPLOYMENT.md) for:
-- 🚀 One-click deployment to Digital Ocean App Platform
-- 🔄 GitHub Actions CI/CD pipeline
-- 🌐 Custom domain setup
-- 📊 Monitoring and scaling
+See the complete [Deployment Guide](./docs/DEPLOYMENT.md) for details.
 
-**Quick Deploy:**
-```bash
-# Install doctl CLI
-brew install doctl  # macOS
-# or download from https://docs.digitalocean.com/reference/doctl/
+Deployment happens automatically via GitHub Actions on every push to `main`.
 
-# Authenticate
-doctl auth init
-
-# Deploy
-doctl apps create --spec .do/app.yaml
-```
+**Live at:** [https://heyding.github.io/angular-tailwind-template/](https://heyding.github.io/angular-tailwind-template/)
 
 ## 📦 Available Scripts
 
@@ -415,8 +402,7 @@ Dieses Projekt ist Open Source und verfügbar unter der [MIT License](LICENSE).
 - [Heroicons](https://heroicons.com)
 - [Angular CDK](https://material.angular.io/cdk)
 - [ngx-translate](https://github.com/ngx-translate/core)
-- [Digital Ocean App Platform](https://www.digitalocean.com/products/app-platform)
-- [Deployment Guide](./DEPLOYMENT.md)
+- [Deployment Guide](./docs/DEPLOYMENT.md)
 
 ## 🙏 Acknowledgments
 
