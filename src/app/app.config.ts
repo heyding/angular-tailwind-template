@@ -13,6 +13,7 @@ import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideApiConfiguration } from './core/api/generated/api-configuration';
 import { ThemeService } from './shared/services/theme.service';
 
 import { environment } from '../environments/environment';
@@ -60,6 +61,7 @@ export const appConfig: ApplicationConfig = {
       maxAge: 25,
       logOnly: environment.production,
     }),
+    provideApiConfiguration(environment.apiUrl),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

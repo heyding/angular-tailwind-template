@@ -1,53 +1,65 @@
 import { Injectable, inject } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable, delay, map, of } from 'rxjs';
-import { User, Post } from '../models/api.model';
-import { environment } from '../../../environments/environment';
+import { Observable, delay, of } from 'rxjs';
+import { PostInput } from '../api/generated/models/post-input';
+import { PostsService, UsersService } from '../api/generated/services';
+import { Post, User } from '../models/api.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  private http = inject(HttpClient);
-  private apiUrl = environment.apiUrl || 'https://jsonplaceholder.typicode.com';
+  private usersService = inject(UsersService);
+  private postsService = inject(PostsService);
 
   // GET example
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.apiUrl}/users`);
+    return this.usersService.getUsers();
   }
 
   // GET by ID example
   getUser(id: number): Observable<User> {
-    return this.http.get<User>(`${this.apiUrl}/users/${id}`);
+    return this.usersService.getUserById({ id });
   }
 
   // GET with query params
   getPosts(userId?: number): Observable<Post[]> {
-    let params = new HttpParams();
-    if (userId) {
-      params = params.set('userId', userId.toString());
-    }
-    return this.http.get<Post[]>(`${this.apiUrl}/posts`, { params });
+    return this.postsService.getPosts(userId ? { userId } : undefined);
   }
 
   // POST example
   createPost(post: Partial<Post>): Observable<Post> {
-    return this.http.post<Post>(`${this.apiUrl}/posts`, post);
+    return this.postsService.createPost({
+      body: this.toPostInput(post),
+    });
   }
 
   // PUT example
   updatePost(id: number, post: Partial<Post>): Observable<Post> {
-    return this.http.put<Post>(`${this.apiUrl}/posts/${id}`, post);
+    return this.postsService.updatePost({
+      id,
+      body: this.toPostInput(post),
+    });
   }
 
   // PATCH example
   patchPost(id: number, post: Partial<Post>): Observable<Post> {
-    return this.http.patch<Post>(`${this.apiUrl}/posts/${id}`, post);
+    return this.postsService.patchPost({
+      id,
+      body: this.toPostInput(post),
+    });
   }
 
   // DELETE example
   deletePost(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/posts/${id}`);
+    return this.postsService.deletePost({ id });
+  }
+
+  private toPostInput(post: Partial<Post>): PostInput {
+    return {
+      title: post.title ?? '',
+      body: post.body ?? '',
+      userId: post.userId ?? 0,
+    };
   }
 
   // Mock API example (for demo purposes)

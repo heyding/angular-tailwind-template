@@ -209,6 +209,9 @@ npm start
 # Production build
 npm run build
 
+# Generate typed Angular client from OpenAPI
+npm run openapi:generate
+
 # Run tests
 npm test
 
