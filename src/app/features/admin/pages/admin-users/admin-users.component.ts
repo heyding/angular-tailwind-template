@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { ApiService } from '../../../../core/services/api.service';
-import { User } from '../../../../core/models/api.model';
+import { User } from '../../../../core/api/generated/models/user';
+import { UsersFacadeService } from '../../../../core/services/users-facade.service';
 
 @Component({
   selector: 'app-admin-users',
@@ -99,14 +99,14 @@ import { User } from '../../../../core/models/api.model';
 export class AdminUsersComponent implements OnInit {
   users: User[] = [];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private usersFacade: UsersFacadeService) {}
 
   ngOnInit(): void {
     this.loadUsers();
   }
 
   loadUsers(): void {
-    this.apiService.getUsers().subscribe({
+    this.usersFacade.getUsers().subscribe({
       next: users => {
         this.users = users.slice(0, 10);
       },

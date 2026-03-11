@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { ApiService } from '../../../../core/services/api.service';
-import { ToastService } from '../../../../shared/services/toast.service';
+import { delay, of } from 'rxjs';
+import { Post } from '../../../../core/api/generated/models/post';
+import { User } from '../../../../core/api/generated/models/user';
+import { PostsFacadeService } from '../../../../core/services/posts-facade.service';
+import { UsersFacadeService } from '../../../../core/services/users-facade.service';
 import { ButtonComponent } from '../../../../shared/components/button/button.component';
-import { User, Post } from '../../../../core/models/api.model';
+import { ToastService } from '../../../../shared/services/toast.service';
 
 @Component({
   selector: 'app-api-demo',
@@ -19,7 +22,8 @@ export class ApiDemoComponent implements OnInit {
   selectedUser: User | null = null;
 
   constructor(
-    private apiService: ApiService,
+    private usersFacade: UsersFacadeService,
+    private postsFacade: PostsFacadeService,
     private toastService: ToastService
   ) {}
 
@@ -28,7 +32,7 @@ export class ApiDemoComponent implements OnInit {
   }
 
   loadUsers(): void {
-    this.apiService.getUsers().subscribe({
+    this.usersFacade.getUsers().subscribe({
       next: users => {
         this.users = users.slice(0, 5); // Show first 5 users
         this.toastService.show('Users loaded successfully!', 'success');
@@ -41,7 +45,7 @@ export class ApiDemoComponent implements OnInit {
   }
 
   loadUser(userId: number): void {
-    this.apiService.getUser(userId).subscribe({
+    this.usersFacade.getUserById(userId).subscribe({
       next: user => {
         this.selectedUser = user;
         this.toastService.show(`User ${user.name} loaded!`, 'info');
@@ -53,7 +57,7 @@ export class ApiDemoComponent implements OnInit {
   }
 
   loadPosts(userId?: number): void {
-    this.apiService.getPosts(userId).subscribe({
+    this.postsFacade.getPosts(userId).subscribe({
       next: posts => {
         this.posts = posts.slice(0, 5); // Show first 5 posts
         const message = userId ? `Posts by user ${userId} loaded!` : 'All posts loaded!';
@@ -72,7 +76,7 @@ export class ApiDemoComponent implements OnInit {
       userId: 1,
     };
 
-    this.apiService.createPost(newPost).subscribe({
+    this.postsFacade.createPost(newPost).subscribe({
       next: post => {
         this.posts.unshift(post);
         this.toastService.show('Post created successfully!', 'success');
@@ -84,7 +88,7 @@ export class ApiDemoComponent implements OnInit {
   }
 
   deletePost(postId: number): void {
-    this.apiService.deletePost(postId).subscribe({
+    this.postsFacade.deletePost(postId).subscribe({
       next: () => {
         this.posts = this.posts.filter(p => p.id !== postId);
         this.toastService.show('Post deleted successfully!', 'success');
@@ -97,7 +101,7 @@ export class ApiDemoComponent implements OnInit {
 
   triggerError(): void {
     // Try to load a non-existent user to trigger 404 error
-    this.apiService.getUser(999999).subscribe({
+    this.usersFacade.getUserById(999999).subscribe({
       error: error => {
         // Error is handled by error interceptor
         console.error('Expected error for demo:', error);
@@ -107,10 +111,19 @@ export class ApiDemoComponent implements OnInit {
 
   testLoadingState(): void {
     // This demonstrates the loading interceptor in action
-    this.apiService.getMockData().subscribe({
-      next: users => {
-        this.toastService.show('Mock data loaded (with delay)', 'info');
-      },
-    });
+    const mockUsers: User[] = [
+      { id: 1, name: 'John Doe', email: 'john@example.com' },
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
+      { id: 3, name: 'Bob Johnson', email: 'bob@example.com' },
+    ];
+
+    of(mockUsers)
+      .pipe(delay(1000))
+      .subscribe({
+        next: users => {
+          this.users = users;
+          this.toastService.show('Mock data loaded (with delay)', 'info');
+        },
+      });
   }
 }
