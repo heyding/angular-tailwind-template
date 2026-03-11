@@ -1,6 +1,6 @@
 {
   "name": "angular-tailwind-template",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "D-Stack Ready Angular 19 Enterprise Template with Tailwind CSS, NgRx, DSGVO compliance, and 25+ production-ready components for German government and public administration",
   "keywords": [
     "angular",
@@ -41,6 +41,9 @@
     "build:gh-pages": "ng build --base-href /angular-tailwind-template/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version",
     "format": "prettier --write \"src/**/*.{ts,html,scss,css,json}\"",
     "format:check": "prettier --check \"src/**/*.{ts,html,scss,css,json}\"",
     "lint": "ng lint",
