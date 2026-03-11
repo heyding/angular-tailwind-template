@@ -14,6 +14,7 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideApiConfiguration } from './core/api/generated/api-configuration';
+import { BrandingService } from './shared/services/branding.service';
 import { ThemeService } from './shared/services/theme.service';
 
 import { environment } from '../environments/environment';
@@ -37,6 +38,11 @@ export function initializeTheme(themeService: ThemeService) {
     // Just trigger it by calling isDark()
     themeService.isDark();
   };
+}
+
+// Initialize branding tokens and text configuration
+export function initializeBranding(brandingService: BrandingService) {
+  return () => brandingService.initialize();
 }
 
 // Initialize translations on app start
@@ -82,5 +88,12 @@ export const appConfig: ApplicationConfig = {
     },
     // Initialize Theme Service early
     { provide: APP_INITIALIZER, useFactory: initializeTheme, deps: [ThemeService], multi: true },
+    // Initialize branding configuration before app starts
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeBranding,
+      deps: [BrandingService],
+      multi: true,
+    },
   ],
 };

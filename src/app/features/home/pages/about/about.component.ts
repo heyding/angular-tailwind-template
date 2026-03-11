@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { BrandingService } from '../../../../shared/services/branding.service';
 
 @Component({
   selector: 'app-about',
@@ -8,4 +9,10 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
 })
-export class AboutComponent {}
+export class AboutComponent {
+  constructor(private brandingService: BrandingService) {}
+
+  get brandText() {
+    return this.brandingService.brand.text;
+  }
+}

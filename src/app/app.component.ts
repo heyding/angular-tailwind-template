@@ -6,6 +6,7 @@ import { CookieBannerComponent } from './shared/components/cookie-banner/cookie-
 import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { ToastContainerComponent } from './shared/components/toast-container/toast-container.component';
+import { BrandingService } from './shared/services/branding.service';
 import { ThemeService } from './shared/services/theme.service';
 
 @Component({
@@ -26,6 +27,11 @@ import { ThemeService } from './shared/services/theme.service';
 export class AppComponent {
   title = 'angular-tailwind-template';
   private readonly themeService = inject(ThemeService); // Initialize theme service
+  private readonly brandingService = inject(BrandingService);
+
+  get brandText() {
+    return this.brandingService.brand.text;
+  }
 
   constructor() {
     // Translation is now initialized via APP_INITIALIZER in app.config.ts

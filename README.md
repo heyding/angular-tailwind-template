@@ -46,6 +46,22 @@ npm start
 - **[Quickstart Guide](QUICKSTART.md)** - 5-Minuten Setup für geforktes Projekt
 - **[Contributing Guide](CONTRIBUTING.md)** - Wie du zum Template beitragen kannst
 
+## 🎯 Branding konfigurieren
+
+Alle zentralen Branding-Werte sind über eine Datei konfigurierbar:
+
+- `src/assets/branding/brand.config.json`
+
+Darüber steuerst du u. a.:
+
+- Farben (Primary, Secondary, Accent)
+- Schriftart (globale Font Family)
+- Hero-Hintergrundbild
+- App-Name, Logo-Initiale, Footer-Labels und Links
+- Developer-Daten auf der About-Seite
+
+Nach Änderungen reicht ein normaler Neustart des Dev-Servers (`npm start`) oder ein Reload bei laufendem Server.
+
 ## 🗺️ Roadmap (3 Phasen)
 
 ### Phase 1: Quick Wins

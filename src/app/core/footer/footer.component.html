@@ -1,9 +1,6 @@
 <div class="fixed inset-x-0 bottom-0 z-40" *ngIf="shouldShowFooter">
   <!-- Optional Banner (can be dismissed) -->
-  <div
-    *ngIf="isVisible"
-    class="bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-900 dark:to-purple-900 shadow-lg"
-  >
+  <div *ngIf="isVisible" class="brand-gradient shadow-lg">
     <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between flex-wrap">
         <div class="w-0 flex-1 flex items-center">
@@ -32,10 +29,10 @@
         </div>
         <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
           <a
-            href="https://github.com/heyding/angular-tailwind-template"
+            [href]="brandText.footerLearnMoreUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center justify-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-indigo-600 dark:text-indigo-900 bg-white hover:bg-gray-50 transition-all shadow-sm"
+            class="flex items-center justify-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium brand-link bg-white hover:bg-gray-50 transition-all shadow-sm"
           >
             {{ 'footer.button.learn-more' | translate }}
           </a>
@@ -76,21 +73,15 @@
         class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600 dark:text-gray-400"
       >
         <div class="flex gap-6">
-          <a
-            routerLink="/privacy"
-            class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            Datenschutz
+          <a routerLink="/privacy" class="brand-link transition-colors">
+            {{ brandText.privacyLabel }}
           </a>
-          <a
-            routerLink="/imprint"
-            class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            Impressum
+          <a routerLink="/imprint" class="brand-link transition-colors">
+            {{ brandText.imprintLabel }}
           </a>
         </div>
         <p>
-          &copy; {{ currentYear }} Angular Tailwind Template
+          &copy; {{ currentYear }} {{ brandText.footerCompanyName }}
           <span class="ml-2 text-xs text-gray-400 dark:text-gray-500">v{{ appVersion }}</span>
         </p>
       </div>

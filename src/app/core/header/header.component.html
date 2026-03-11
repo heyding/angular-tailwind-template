@@ -6,42 +6,42 @@
       <div class="flex items-center gap-8">
         <a routerLink="/home" class="flex items-center gap-2 group">
           <div
-            class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform"
+            class="w-10 h-10 brand-gradient rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform"
           >
-            <span class="text-white font-bold text-xl">A</span>
+            <span class="text-white font-bold text-xl">{{ brandText.appInitial }}</span>
           </div>
-          <span class="font-bold text-xl text-gray-900 dark:text-white hidden sm:block"
-            >Angular Template</span
-          >
+          <span class="font-bold text-xl text-gray-900 dark:text-white hidden sm:block">{{
+            brandText.appName
+          }}</span>
         </a>
         <div class="hidden lg:flex lg:items-center lg:gap-1">
           <a
             routerLink="/about"
-            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 brand-hover-text transition-all"
           >
             {{ 'header.menu.company' | translate }}
           </a>
           <a
             routerLink="/components"
-            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 brand-hover-text transition-all"
           >
             {{ 'header.menu.components' | translate }}
           </a>
           <a
             routerLink="/api-demo"
-            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 brand-hover-text transition-all"
           >
             {{ 'header.menu.api' | translate }}
           </a>
           <a
             routerLink="/features-demo"
-            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 brand-hover-text transition-all"
           >
             {{ 'header.menu.features' | translate }}
           </a>
           <a
             routerLink="/admin"
-            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 brand-hover-text transition-all"
           >
             {{ 'header.menu.admin' | translate }}
           </a>
@@ -54,7 +54,7 @@
         @if (isAuthenticated$ | async) {
           <button
             (click)="logout()"
-            class="px-4 py-2 rounded-lg text-sm font-medium bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 transition-all shadow-sm hover:shadow-md"
+            class="px-4 py-2 rounded-lg text-sm font-medium brand-gradient text-white transition-all shadow-sm hover:shadow-md"
           >
             {{ 'header.button.sign-out' | translate }}
           </button>
@@ -67,7 +67,7 @@
           </a>
           <a
             href="#"
-            class="px-4 py-2 rounded-lg text-sm font-medium bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 transition-all shadow-sm hover:shadow-md"
+            class="px-4 py-2 rounded-lg text-sm font-medium brand-gradient text-white transition-all shadow-sm hover:shadow-md"
           >
             {{ 'header.button.sign-up' | translate }}
           </a>
