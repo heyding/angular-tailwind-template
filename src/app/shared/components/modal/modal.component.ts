@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { animate, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 import { ButtonComponent } from '../button/button.component';
-import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-modal',
