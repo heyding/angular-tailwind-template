@@ -11,7 +11,7 @@ import { LoadingService } from '../../services/loading.service';
   template: `
     @if (loading$ | async) {
       <div
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
         [@fadeIn]
       >
         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-xl">

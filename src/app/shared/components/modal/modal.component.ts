@@ -14,7 +14,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
         <div class="fixed inset-0 z-50 overflow-y-auto" [@fadeIn]>
           <!-- Backdrop -->
           <div
-            class="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
+            class="fixed inset-0 bg-black/50 transition-opacity"
             (click)="modalService.cancel()"
           ></div>
 
