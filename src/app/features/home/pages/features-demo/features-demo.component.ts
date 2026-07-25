@@ -93,8 +93,8 @@ export class FeaturesDemoComponent implements OnInit {
     });
   }
 
-  onSelectionChange(selected: User[]): void {
-    console.log('Selected users:', selected);
+  onSelectionChange(_selected: User[]): void {
+    // Selection handled by parent/store if needed
   }
 
   toggleDropdown(): void {
