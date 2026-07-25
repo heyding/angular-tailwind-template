@@ -1,4 +1,4 @@
-import { HttpInterceptorFn, HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
 import { retry, timer } from 'rxjs';
 
 export const retryInterceptor: HttpInterceptorFn = (req, next) => {
