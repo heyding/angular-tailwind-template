@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideTranslateService } from '@ngx-translate/core';
 import { ApiDemoComponent } from './api-demo.component';
-import { TranslateModule } from '@ngx-translate/core';
 
 describe('ApiDemoComponent', () => {
   let component: ApiDemoComponent;
@@ -10,8 +10,8 @@ describe('ApiDemoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ApiDemoComponent, TranslateModule.forRoot()],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
+      imports: [ApiDemoComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideTranslateService()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ApiDemoComponent);
