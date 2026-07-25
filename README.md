@@ -1,10 +1,10 @@
 # D-Stack Angular Template
 
-Angular 19 Starter-Template mit Tailwind CSS, NgRx, i18n, OpenAPI-Client-Generierung und GitHub-Pages-Deployment.
+Angular 22 Starter-Template mit Tailwind CSS 4, NgRx 21, i18n, OpenAPI-Client-Generierung und GitHub-Pages-Deployment.
 
-[![Angular](https://img.shields.io/badge/Angular-19.2-red?logo=angular)](https://angular.io)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
+[![Angular](https://img.shields.io/badge/Angular-22-red?logo=angular)](https://angular.io)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.3-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
 [![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)](https://heyding.github.io/angular-tailwind-template/)
 
 ## Live Demo
@@ -24,6 +24,7 @@ App läuft danach unter `http://localhost:4200`.
 
 ## Documentation
 
+- [Changelog](docs/CHANGELOG.md)
 - [Customization Guide](docs/CUSTOMIZATION.md)
 - [Deployment Guide](docs/DEPLOYMENT.md)
 - [Pre-commit Hooks](docs/PRE-COMMIT-HOOKS.md)
@@ -45,10 +46,10 @@ Konfigurierbar sind u. a.:
 
 ## Key Features
 
-- Angular 19 mit Standalone Components
-- Tailwind CSS 3 + Dark Mode
-- NgRx Store + lokale Persistenz
-- i18n (`de` / `en`)
+- Angular 22 mit Standalone Components und `@angular/build` (esbuild-nativ)
+- Tailwind CSS 4 + Dark Mode (CSS-first Konfiguration)
+- NgRx 21 Store + lokale Persistenz
+- i18n (`de` / `en`) via ngx-translate 18
 - OpenAPI-Client-Generierung (`ng-openapi-gen`)
 - Playwright Smoke Tests + Lighthouse CI
 - DSGVO-relevante Seiten (Datenschutz/Impressum/Cookie-Banner)

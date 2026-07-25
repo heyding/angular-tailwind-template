@@ -1,15 +1,18 @@
 import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
-import { inject } from '@angular/core';
+import { inject, Injector } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { catchError, throwError } from 'rxjs';
 import { ToastService } from '../../shared/services/toast.service';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
   const toastService = inject(ToastService);
-  const translate = inject(TranslateService);
+  const injector = inject(Injector);
 
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
+      // Lazy injection to avoid circular dependency:
+      // TranslateService → TranslateHttpLoader → HttpClient → this interceptor
+      const translate = injector.get(TranslateService);
       let errorMessage = translate.instant('errors.unexpected');
 
       if (error.error instanceof ErrorEvent) {

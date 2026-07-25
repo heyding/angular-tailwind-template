@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { delay, of } from 'rxjs';
 import { Post } from '../../../../core/api/generated/models/post';
 import { User } from '../../../../core/api/generated/models/user';
@@ -12,7 +12,7 @@ import { ToastService } from '../../../../shared/services/toast.service';
 @Component({
   selector: 'app-api-demo',
   standalone: true,
-  imports: [CommonModule, TranslateModule, ButtonComponent],
+  imports: [CommonModule, TranslatePipe, ButtonComponent],
   templateUrl: './api-demo.component.html',
   styleUrls: ['./api-demo.component.css'],
 })

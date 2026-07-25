@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { BrandingService } from '../../../../shared/services/branding.service';
 import { FeatureOverviewComponent } from '../../components/feature-overview/feature-overview.component';
@@ -18,7 +18,7 @@ import { HomeSelectors } from './store/home.selectors';
   imports: [
     CommonModule,
     FormsModule,
-    TranslateModule,
+    TranslatePipe,
     FeatureOverviewComponent,
     LanguageSwitchComponent,
   ],

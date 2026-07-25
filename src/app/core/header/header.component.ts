@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IconComponent } from '../../shared/components/icon/icon.component';
@@ -14,7 +14,7 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   standalone: true,
-  imports: [CommonModule, RouterLink, TranslateModule, IconComponent, ThemeToggleComponent],
+  imports: [CommonModule, RouterLink, TranslatePipe, IconComponent, ThemeToggleComponent],
 })
 export class HeaderComponent {
   isAuthenticated$: Observable<boolean>;

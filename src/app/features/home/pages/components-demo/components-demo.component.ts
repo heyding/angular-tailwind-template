@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ButtonComponent } from '../../../../shared/components/button/button.component';
 import { IconComponent } from '../../../../shared/components/icon/icon.component';
 import { ModalService } from '../../../../shared/services/modal.service';
@@ -8,7 +8,7 @@ import { ToastService } from '../../../../shared/services/toast.service';
 @Component({
   selector: 'app-components-demo',
   standalone: true,
-  imports: [ButtonComponent, IconComponent, TranslateModule],
+  imports: [ButtonComponent, IconComponent, TranslatePipe],
   template: `
     <div class="container mx-auto px-4 py-12 max-w-4xl bg-white dark:bg-gray-900 min-h-screen">
       <h1 class="text-4xl font-bold mb-8 text-gray-900 dark:text-white">

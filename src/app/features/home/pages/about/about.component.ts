@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { BrandingService } from '../../../../shared/services/branding.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { BrandingService } from '../../../../shared/services/branding.service';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslatePipe],
 })
 export class AboutComponent {
   constructor(private brandingService: BrandingService) {}
