@@ -2,8 +2,8 @@
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 
-/* Content sources (mirrors previous tailwind.config.ts) */
-@source "../**/*.{html,ts}";
+/* Content sources: path is relative to this file (src/styles.css) */
+@source "../src/**/*.{html,ts}";
 
 /* Dark mode: toggle via .dark class on a parent element */
 @variant dark (&:is(.dark, .dark *));
