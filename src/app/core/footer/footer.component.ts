@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import packageJson from '../../../../package.json';
 import { BrandingService } from '../../shared/services/branding.service';
 
@@ -10,7 +10,7 @@ import { BrandingService } from '../../shared/services/branding.service';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
   standalone: true,
-  imports: [CommonModule, TranslateModule, RouterLink],
+  imports: [CommonModule, TranslatePipe, RouterLink],
 })
 export class FooterComponent {
   private translate = inject(TranslateService);
@@ -24,7 +24,7 @@ export class FooterComponent {
   }
 
   get shouldShowFooter(): boolean {
-    return this.translate.currentLang === 'de';
+    return this.translate.currentLang() === 'de';
   }
 
   dismiss(): void {

@@ -6,7 +6,7 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Task {
   id: number;
@@ -17,7 +17,7 @@ interface Task {
 @Component({
   selector: 'app-drag-drop-demo',
   standalone: true,
-  imports: [CommonModule, DragDropModule, TranslateModule],
+  imports: [CommonModule, DragDropModule, TranslatePipe],
   templateUrl: './drag-drop-demo.component.html',
   styleUrls: ['./drag-drop-demo.component.css'],
 })

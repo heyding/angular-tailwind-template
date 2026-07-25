@@ -1,7 +1,7 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface VirtualItem {
   id: number;
@@ -14,7 +14,7 @@ interface VirtualItem {
 @Component({
   selector: 'app-virtual-scroll-demo',
   standalone: true,
-  imports: [CommonModule, ScrollingModule, TranslateModule],
+  imports: [CommonModule, ScrollingModule, TranslatePipe],
   templateUrl: './virtual-scroll-demo.component.html',
   styleUrls: ['./virtual-scroll-demo.component.css'],
 })

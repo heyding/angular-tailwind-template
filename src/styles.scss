@@ -1,6 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+/* Content sources (mirrors previous tailwind.config.ts) */
+@source "../**/*.{html,ts}";
+
+/* Dark mode: toggle via .dark class on a parent element */
+@variant dark (&:is(.dark, .dark *));
+
+/* Custom theme tokens */
+@theme {
+  --font-family-sans:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
 :root {
   --brand-font-family: 'Inter', sans-serif;

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { User } from '../../../../core/api/generated/models/user';
 import { UsersFacadeService } from '../../../../core/services/users-facade.service';
 import { TableComponent } from '../../../../shared/components/table/table.component';
@@ -20,7 +20,7 @@ import { TruncatePipe } from '../../../../shared/pipes/truncate.pipe';
   imports: [
     CommonModule,
     FormsModule,
-    TranslateModule,
+    TranslatePipe,
     TableComponent,
     TruncatePipe,
     FormatNumberPipe,
